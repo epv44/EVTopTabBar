@@ -9,7 +9,10 @@
 Pod::Spec.new do |s|
   s.name             = "EVTopTabBar"
   s.version          = "0.1.0"
-  s.summary          = "A short description of EVTopTabBar."
+  s.license          = { :type => 'MIT' }
+  s.homepage         = 'https://github.com/epv44/EVTopTabBar'
+  s.authors          = { 'Eric Vennaro' => 'epv9@case.edu' }
+  s.summary          = "Custom UITabBarController with custom tabs that are at the top of the controller."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,6 +20,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = <<-DESC
+
                        DESC
 
   s.homepage         = "https://github.com/<GITHUB_USERNAME>/EVTopTabBar"

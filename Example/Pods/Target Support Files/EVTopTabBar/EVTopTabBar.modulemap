@@ -1,0 +1,6 @@
+framework module EVTopTabBar {
+  umbrella header "EVTopTabBar-umbrella.h"
+
+  export *
+  module * { export * }
+}

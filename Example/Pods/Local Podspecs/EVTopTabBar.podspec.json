@@ -1,0 +1,25 @@
+{
+  "name": "EVTopTabBar",
+  "version": "0.1.0",
+  "summary": "A short description of EVTopTabBar.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/EVTopTabBar",
+  "license": "MIT",
+  "authors": {
+    "Eric Vennaro": "evennaro@acumensolutions.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/EVTopTabBar.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "EVTopTabBar": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}
