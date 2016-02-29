@@ -22,7 +22,7 @@ pod "EVTopTabBar"
 
 ## Author
 
-Eric Vennaro, evennaro@acumensolutions.com
+Eric Vennaro, epv9@case.edu
 
 ## License
 
