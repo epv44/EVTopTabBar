@@ -11,19 +11,32 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+* iOS 7.0+
+* ARC
 ## Installation
 
-EVTopTabBar is available through [CocoaPods](http://cocoapods.org). To install
+EVTopTabBar is available through [CocoaPods][podLink]. To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod "EVTopTabBar"
 ```
+## Getting Started
+
+### Project Setup
+
+To setup project 
+### Demo Project
 
 ## Author
 
-Eric Vennaro, epv9@case.edu
+Eric Vennaro, epv9@case.edu, [blog][blogLink]
 
 ## License
 
-EVTopTabBar is available under the MIT license. See the LICENSE file for more info.
+EVTopTabBar is available under the [MIT License][mitLink]. See the LICENSE file for more info.
+>**Copyright &copy; 2016-present Eric Vennaro.**
+
+[podLink]:http://cocoapods.org
+[blogLink]:http://www.ericvennaro.com
+[mitLink]:http://opensource.org/licenses/MIT
