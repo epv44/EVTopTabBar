@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  EVTopTabBar: e1baf441af6c3c2da8749539c7fb8cea3ab9c1ae
+  EVTopTabBar: 047372ca29284313fb9a7af0dbeb551ff6dfa5dc
 
 COCOAPODS: 0.39.0

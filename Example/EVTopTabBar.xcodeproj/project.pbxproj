@@ -10,10 +10,14 @@
 		5D496BBC2E0C88FCAB744F3E /* Pods_EVTopTabBar_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB1964E22D0F22F600590F /* Pods_EVTopTabBar_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
-		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		D41C20711C84EF7E005A0147 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D41C20701C84EF7E005A0147 /* ViewController.xib */; };
+		D41C20751C84EFCE005A0147 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D41C20741C84EFCE005A0147 /* FirstViewController.xib */; };
+		D41C20771C84EFD9005A0147 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41C20761C84EFD9005A0147 /* FirstViewController.swift */; };
+		D41C207A1C84F033005A0147 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41C20791C84F033005A0147 /* SecondViewController.swift */; };
+		D41C207C1C84F04A005A0147 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D41C207B1C84F04A005A0147 /* SecondViewController.xib */; };
 		F488471C6828F9A4DF6B93B6 /* Pods_EVTopTabBar_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCC0C1E89A6756B20CE8D9E /* Pods_EVTopTabBar_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +41,6 @@
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* EVTopTabBar_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EVTopTabBar_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +49,11 @@
 		70008698F0FC4A37D0EA4922 /* Pods-EVTopTabBar_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EVTopTabBar_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EVTopTabBar_Tests/Pods-EVTopTabBar_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		941E0442CE4EDD89272F4F41 /* Pods-EVTopTabBar_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EVTopTabBar_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EVTopTabBar_Tests/Pods-EVTopTabBar_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B1BF18011CC032729A082DF1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		D41C20701C84EF7E005A0147 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		D41C20741C84EFCE005A0147 /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
+		D41C20761C84EFD9005A0147 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		D41C20791C84F033005A0147 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		D41C207B1C84F04A005A0147 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		E7A0E6CF759F7803A30EC57F /* Pods-EVTopTabBar_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EVTopTabBar_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EVTopTabBar_Example/Pods-EVTopTabBar_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,8 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				D41C20731C84EFBF005A0147 /* Views */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -146,6 +153,51 @@
 				3EDB1964E22D0F22F600590F /* Pods_EVTopTabBar_Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D41C20721C84EF8E005A0147 /* Page View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				D41C20701C84EF7E005A0147 /* ViewController.xib */,
+			);
+			name = "Page View Controller";
+			sourceTree = "<group>";
+		};
+		D41C20731C84EFBF005A0147 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D41C20721C84EF8E005A0147 /* Page View Controller */,
+				D41C207E1C84F06A005A0147 /* Sub View Controllers */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D41C20781C84EFF9005A0147 /* First View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D41C20741C84EFCE005A0147 /* FirstViewController.xib */,
+				D41C20761C84EFD9005A0147 /* FirstViewController.swift */,
+			);
+			name = "First View Controller";
+			sourceTree = "<group>";
+		};
+		D41C207D1C84F062005A0147 /* Second View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D41C20791C84F033005A0147 /* SecondViewController.swift */,
+				D41C207B1C84F04A005A0147 /* SecondViewController.xib */,
+			);
+			name = "Second View Controller";
+			sourceTree = "<group>";
+		};
+		D41C207E1C84F06A005A0147 /* Sub View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D41C20781C84EFF9005A0147 /* First View Controller */,
+				D41C207D1C84F062005A0147 /* Second View Controller */,
+			);
+			name = "Sub View Controllers";
 			sourceTree = "<group>";
 		};
 		FF6DA9905DB765D51269EA6A /* Pods */ = {
@@ -246,9 +298,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				D41C20711C84EF7E005A0147 /* ViewController.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				D41C20751C84EFCE005A0147 /* FirstViewController.xib in Resources */,
+				D41C207C1C84F04A005A0147 /* SecondViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +413,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D41C207A1C84F033005A0147 /* SecondViewController.swift in Sources */,
+				D41C20771C84EFD9005A0147 /* FirstViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
@@ -383,14 +439,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				607FACDA1AFB9204008FA782 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## EVTopTabBar
 
-Copyright (c) 2016 Eric Vennaro <evennaro@acumensolutions.com>
+Copyright (c) 2016 Eric Vennaro <epv9@case.edu>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

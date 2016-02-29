@@ -1,13 +1,13 @@
 {
   "name": "EVTopTabBar",
   "version": "0.1.0",
-  "summary": "A short description of EVTopTabBar.",
-  "description": "",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/EVTopTabBar",
-  "license": "MIT",
+  "homepage": "https://github.com/epv44/EVTopTabBar",
   "authors": {
-    "Eric Vennaro": "evennaro@acumensolutions.com"
+    "Eric Vennaro": "epv9@case.edu"
   },
+  "summary": "Custom UITabBarController with custom tabs that are at the top of the controller.",
+  "description": "EVTopTabBar is a custom UIPageViewController for iOS where the page control is at the top.",
+  "license": "MIT",
   "source": {
     "git": "https://github.com/<GITHUB_USERNAME>/EVTopTabBar.git",
     "tag": "0.1.0"

@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		240EED46AA6570D273D6531A487CBCDB /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDF4CBD70D2E948651B111235CE6D85 /* ReplaceMe.swift */; };
 		2AEEA0975C67C0CCE315FDC513D99103 /* Pods-EVTopTabBar_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6E231950EF0E5A94B74404E1722E6 /* Pods-EVTopTabBar_Example-dummy.m */; };
 		305DC81C0CBCFF0290A9D572A73683C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		42470D20DF2539A061230A9CD2DF8369 /* Pods-EVTopTabBar_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CFEB9E31207B86FCB18FD1541567327 /* Pods-EVTopTabBar_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		578197D3EF4E7708539B03C3C8932EB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		59156AA8FC51779C84D4164A9A280136 /* Pods-EVTopTabBar_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BB77CD2D90C39DDBACC9714785FF6DFF /* Pods-EVTopTabBar_Tests-dummy.m */; };
-		75E1C50D861A1896EB46D0DDBF6864F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		ACB46782842E6B72AAE19550C052790D /* EVPageViewTopTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAA6E59092F33225C6D186D5D837A5 /* EVPageViewTopTabBar.swift */; };
+		C2FECF067A2246020A7D74511EB0DF6B /* EVTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD64934D8AD5C3BB307598F3DB5F8EB8 /* EVTabBar.swift */; };
 		CFDDD2B7DDBAD6AEA4E460BE949E2DDE /* Pods-EVTopTabBar_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 41DABA71FB9F0C7CD0EC55889C00815F /* Pods-EVTopTabBar_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DE89A582988FD40CA6892E314344C26F /* EVTopTabBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BB64937E8D282D6ACF88C582132BF298 /* EVTopTabBar-dummy.m */; };
-		E83F74D0CB89257CD5264F114CA744E0 /* EVTopTabBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FB01693B902386E91B926B240363182 /* EVTopTabBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F3FA8CDA325D807ED4CB67C4AB9A7E0D /* EVTopTabBar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5F433745BE1422271175C852D29BA9FE /* EVTopTabBar.bundle */; };
+		D32592D3A390CEE86087F42FA38D9A96 /* EVTopTabBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BB64937E8D282D6ACF88C582132BF298 /* EVTopTabBar-dummy.m */; };
+		E1D076199D96B3ADB5AF1E73E6074C2F /* EVTopTabBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FB01693B902386E91B926B240363182 /* EVTopTabBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4529A794A52AA56EE20B01FAEC5D25A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		EC84FFF3F10033C9034F7F6D67CE6863 /* EVTopTabBar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5F433745BE1422271175C852D29BA9FE /* EVTopTabBar.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,21 +26,21 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 906341A08AB89B92984825557F315DFE;
+			remoteGlobalIDString = ED63F66345D3DF577C1D23C42E4194D1;
 			remoteInfo = EVTopTabBar;
 		};
-		3EB6EF96BACCCA8B04FE9340AE7C2BAA /* PBXContainerItemProxy */ = {
+		D97D34B8EC8EADBB272F4AD495FE7104 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C20D8AD1F2DAC278039A57203509B1CD;
+			remoteGlobalIDString = 6028BDF59980C47EB1480427DC506086;
 			remoteInfo = "EVTopTabBar-EVTopTabBar";
 		};
 		EBB483416E97C0A24D34FE8896A19509 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 906341A08AB89B92984825557F315DFE;
+			remoteGlobalIDString = ED63F66345D3DF577C1D23C42E4194D1;
 			remoteInfo = EVTopTabBar;
 		};
 /* End PBXContainerItemProxy section */
@@ -61,7 +62,6 @@
 		8F422E8524F1774D1093947BE66A8ADC /* Pods-EVTopTabBar_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EVTopTabBar_Tests-resources.sh"; sourceTree = "<group>"; };
 		9CDA90CE8C6473FBC3E6E9E774E50B86 /* Pods-EVTopTabBar_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EVTopTabBar_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A2F92F7BC06C92FBEF323FD4D548D8C2 /* Pods-EVTopTabBar_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EVTopTabBar_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		ADDF4CBD70D2E948651B111235CE6D85 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		B21798517A7DF3D46CB3700F8AE827C8 /* EVTopTabBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EVTopTabBar-prefix.pch"; sourceTree = "<group>"; };
 		B4FE54A22A09F882286B7EFBE0DE9DAB /* Pods_EVTopTabBar_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EVTopTabBar_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -72,10 +72,12 @@
 		BEB59E8B521F5FD0728C1625AAB7113F /* Pods-EVTopTabBar_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EVTopTabBar_Example-frameworks.sh"; sourceTree = "<group>"; };
 		C18021A7D0B023D505A45054346B2E92 /* EVTopTabBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = EVTopTabBar.modulemap; sourceTree = "<group>"; };
 		C3B23F22C20CD990C2EB4A1E5A0DF162 /* Pods-EVTopTabBar_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-EVTopTabBar_Tests.modulemap"; sourceTree = "<group>"; };
+		CD64934D8AD5C3BB307598F3DB5F8EB8 /* EVTabBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EVTabBar.swift; sourceTree = "<group>"; };
 		D688C4F3CD1FE615C22B783BC48B7556 /* Pods-EVTopTabBar_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EVTopTabBar_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		D76767C65FD9CDEDB9891260120D4810 /* Pods-EVTopTabBar_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EVTopTabBar_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DAD6E231950EF0E5A94B74404E1722E6 /* Pods-EVTopTabBar_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EVTopTabBar_Example-dummy.m"; sourceTree = "<group>"; };
 		E141D4AE719A2149C970FF087CB6C344 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9CAA6E59092F33225C6D186D5D837A5 /* EVPageViewTopTabBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EVPageViewTopTabBar.swift; sourceTree = "<group>"; };
 		EE4C2E0659628C76899FCBEFD3346007 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1E44D633EB2F45E9FD66C64695FD765 /* Pods-EVTopTabBar_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EVTopTabBar_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,18 +91,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		801C8AF8FB1B9942EFC500A5BF4E9CE1 /* Frameworks */ = {
+		5F77032C383AAEF4096C3218319E48DB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B6573CDE5B6CF19BA069FAC47167A7AE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				75E1C50D861A1896EB46D0DDBF6864F6 /* Foundation.framework in Frameworks */,
+				E4529A794A52AA56EE20B01FAEC5D25A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,17 +107,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DB51887C66396253AA4B3FBBCDB613FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		051847875CFD737F391BCE5157066A54 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				ADDF4CBD70D2E948651B111235CE6D85 /* ReplaceMe.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		436684CD53E1B6D40D501BE6C7FC4A0B /* Pods-EVTopTabBar_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +146,15 @@
 			);
 			sourceTree = "<group>";
 		};
+		84730208A5A52272B7BF35F75E0A0BF6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E9CAA6E59092F33225C6D186D5D837A5 /* EVPageViewTopTabBar.swift */,
+				CD64934D8AD5C3BB307598F3DB5F8EB8 /* EVTabBar.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		9442BB1CD319CFCB7D42A11CB1398F1F /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +176,14 @@
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/EVTopTabBar";
+			sourceTree = "<group>";
+		};
+		A5E08A4D55283DF58D305E2D8C8CA9C7 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				84730208A5A52272B7BF35F75E0A0BF6 /* Classes */,
+			);
+			path = Pod;
 			sourceTree = "<group>";
 		};
 		B801B6FB8B3DBCC26EC3B4E6D011CCD0 /* Pods-EVTopTabBar_Tests */ = {
@@ -217,14 +228,6 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		CBEAD952C5B60DB669978FDB86DEF32F /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				051847875CFD737F391BCE5157066A54 /* Classes */,
-			);
-			path = Pod;
-			sourceTree = "<group>";
-		};
 		E7FB5FB2BA5C48ABDC0030B42E0CCFE4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,7 +242,7 @@
 		F1FC2872DBEE974DDAD0D188FB999466 /* EVTopTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				CBEAD952C5B60DB669978FDB86DEF32F /* Pod */,
+				A5E08A4D55283DF58D305E2D8C8CA9C7 /* Pod */,
 				9C05C97F32F1A446E2C0A8D4E14E6A4D /* Support Files */,
 			);
 			name = EVTopTabBar;
@@ -257,11 +260,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2F75A975F48D116852607BFEC5402976 /* Headers */ = {
+		1F6B3B80739DE3650CA4761B9A72F866 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E83F74D0CB89257CD5264F114CA744E0 /* EVTopTabBar-umbrella.h in Headers */,
+				E1D076199D96B3ADB5AF1E73E6074C2F /* EVTopTabBar-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,24 +279,22 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		906341A08AB89B92984825557F315DFE /* EVTopTabBar */ = {
+		6028BDF59980C47EB1480427DC506086 /* EVTopTabBar-EVTopTabBar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4276F2859536F65F62322205BE4972F9 /* Build configuration list for PBXNativeTarget "EVTopTabBar" */;
+			buildConfigurationList = 752FB805E11AB6106613CA84D8A03F0B /* Build configuration list for PBXNativeTarget "EVTopTabBar-EVTopTabBar" */;
 			buildPhases = (
-				F0266639DCB5F3AA21AAA6274ECF3CAD /* Sources */,
-				B6573CDE5B6CF19BA069FAC47167A7AE /* Frameworks */,
-				214D39625C5EBC03A1B48729A480D992 /* Resources */,
-				2F75A975F48D116852607BFEC5402976 /* Headers */,
+				86C1C6674EF865C82CCE3BB39BC9AD5C /* Sources */,
+				DB51887C66396253AA4B3FBBCDB613FB /* Frameworks */,
+				BD40390D2CCA498F0148D339EF3B4192 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7B27D397B0929F17B9F7D419AF7D77F9 /* PBXTargetDependency */,
 			);
-			name = EVTopTabBar;
-			productName = EVTopTabBar;
-			productReference = 8190A7F178026DEDDECE4A0D1F28D44E /* EVTopTabBar.framework */;
-			productType = "com.apple.product-type.framework";
+			name = "EVTopTabBar-EVTopTabBar";
+			productName = "EVTopTabBar-EVTopTabBar";
+			productReference = 5F433745BE1422271175C852D29BA9FE /* EVTopTabBar.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 		C1C4D87C90AEF912E5BFC1215A109E16 /* Pods-EVTopTabBar_Example */ = {
 			isa = PBXNativeTarget;
@@ -313,23 +314,6 @@
 			productReference = 2126E707522CFDA382595C7B2980C2B8 /* Pods_EVTopTabBar_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C20D8AD1F2DAC278039A57203509B1CD /* EVTopTabBar-EVTopTabBar */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 90FD8F737A196B768618FF8AC916554C /* Build configuration list for PBXNativeTarget "EVTopTabBar-EVTopTabBar" */;
-			buildPhases = (
-				07D89B8A4B16FE9B317F25FF3BDA09D5 /* Sources */,
-				801C8AF8FB1B9942EFC500A5BF4E9CE1 /* Frameworks */,
-				84A3CE53FF6BC93172B821EA859C9B2A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "EVTopTabBar-EVTopTabBar";
-			productName = "EVTopTabBar-EVTopTabBar";
-			productReference = 5F433745BE1422271175C852D29BA9FE /* EVTopTabBar.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
 		D9E8DE613362EFA6A79C2A3E53C43980 /* Pods-EVTopTabBar_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 783BB4937F03633CED123BC966800CE1 /* Build configuration list for PBXNativeTarget "Pods-EVTopTabBar_Tests" */;
@@ -348,6 +332,25 @@
 			productReference = B4FE54A22A09F882286B7EFBE0DE9DAB /* Pods_EVTopTabBar_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		ED63F66345D3DF577C1D23C42E4194D1 /* EVTopTabBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 912AED81245AEE3DE8ED2B4B38323EFF /* Build configuration list for PBXNativeTarget "EVTopTabBar" */;
+			buildPhases = (
+				E7D52AA522158A0E9A4FCC92B058D85F /* Sources */,
+				5F77032C383AAEF4096C3218319E48DB /* Frameworks */,
+				8BC78148A10D16FE9EF7499040ADDEAF /* Resources */,
+				1F6B3B80739DE3650CA4761B9A72F866 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E4E704B24317D5B4552F1E7E0876110E /* PBXTargetDependency */,
+			);
+			name = EVTopTabBar;
+			productName = EVTopTabBar;
+			productReference = 8190A7F178026DEDDECE4A0D1F28D44E /* EVTopTabBar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -355,7 +358,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -369,8 +372,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				906341A08AB89B92984825557F315DFE /* EVTopTabBar */,
-				C20D8AD1F2DAC278039A57203509B1CD /* EVTopTabBar-EVTopTabBar */,
+				ED63F66345D3DF577C1D23C42E4194D1 /* EVTopTabBar */,
+				6028BDF59980C47EB1480427DC506086 /* EVTopTabBar-EVTopTabBar */,
 				C1C4D87C90AEF912E5BFC1215A109E16 /* Pods-EVTopTabBar_Example */,
 				D9E8DE613362EFA6A79C2A3E53C43980 /* Pods-EVTopTabBar_Tests */,
 			);
@@ -378,15 +381,15 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		214D39625C5EBC03A1B48729A480D992 /* Resources */ = {
+		8BC78148A10D16FE9EF7499040ADDEAF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3FA8CDA325D807ED4CB67C4AB9A7E0D /* EVTopTabBar.bundle in Resources */,
+				EC84FFF3F10033C9034F7F6D67CE6863 /* EVTopTabBar.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		84A3CE53FF6BC93172B821EA859C9B2A /* Resources */ = {
+		BD40390D2CCA498F0148D339EF3B4192 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -396,7 +399,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		07D89B8A4B16FE9B317F25FF3BDA09D5 /* Sources */ = {
+		86C1C6674EF865C82CCE3BB39BC9AD5C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -419,34 +422,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F0266639DCB5F3AA21AAA6274ECF3CAD /* Sources */ = {
+		E7D52AA522158A0E9A4FCC92B058D85F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE89A582988FD40CA6892E314344C26F /* EVTopTabBar-dummy.m in Sources */,
-				240EED46AA6570D273D6531A487CBCDB /* ReplaceMe.swift in Sources */,
+				ACB46782842E6B72AAE19550C052790D /* EVPageViewTopTabBar.swift in Sources */,
+				C2FECF067A2246020A7D74511EB0DF6B /* EVTabBar.swift in Sources */,
+				D32592D3A390CEE86087F42FA38D9A96 /* EVTopTabBar-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7B27D397B0929F17B9F7D419AF7D77F9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "EVTopTabBar-EVTopTabBar";
-			target = C20D8AD1F2DAC278039A57203509B1CD /* EVTopTabBar-EVTopTabBar */;
-			targetProxy = 3EB6EF96BACCCA8B04FE9340AE7C2BAA /* PBXContainerItemProxy */;
-		};
 		8D6A8385E1A9BEFB116EFC46B11F803B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = EVTopTabBar;
-			target = 906341A08AB89B92984825557F315DFE /* EVTopTabBar */;
+			target = ED63F66345D3DF577C1D23C42E4194D1 /* EVTopTabBar */;
 			targetProxy = 178BC3F94246B294F0F01F8378205188 /* PBXContainerItemProxy */;
+		};
+		E4E704B24317D5B4552F1E7E0876110E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "EVTopTabBar-EVTopTabBar";
+			target = 6028BDF59980C47EB1480427DC506086 /* EVTopTabBar-EVTopTabBar */;
+			targetProxy = D97D34B8EC8EADBB272F4AD495FE7104 /* PBXContainerItemProxy */;
 		};
 		E653A30ED127203053BDF60436560851 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = EVTopTabBar;
-			target = 906341A08AB89B92984825557F315DFE /* EVTopTabBar */;
+			target = ED63F66345D3DF577C1D23C42E4194D1 /* EVTopTabBar */;
 			targetProxy = EBB483416E97C0A24D34FE8896A19509 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -473,25 +477,12 @@
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_EVTopTabBar_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		0539314F1963B9D0C2C37F1EE7864BA8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 785F38CC3AF578C4B5644048FD6FC330 /* EVTopTabBar.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = EVTopTabBar;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -547,7 +538,6 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -590,7 +580,6 @@
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_EVTopTabBar_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -622,7 +611,6 @@
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_EVTopTabBar_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -633,7 +621,7 @@
 			};
 			name = Debug;
 		};
-		7DD5067FE35F4F469E3BE26E63440599 /* Release */ = {
+		A05FEA9475374DF27109F58486C30FD4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 785F38CC3AF578C4B5644048FD6FC330 /* EVTopTabBar.xcconfig */;
 			buildSettings = {
@@ -651,7 +639,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/EVTopTabBar/EVTopTabBar.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = EVTopTabBar;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -661,7 +648,7 @@
 			};
 			name = Release;
 		};
-		8616E7A5C9A332336CBE5185CA057B9F /* Debug */ = {
+		A69455F8B6F7285C161A453E45DCA6D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 785F38CC3AF578C4B5644048FD6FC330 /* EVTopTabBar.xcconfig */;
 			buildSettings = {
@@ -694,7 +681,6 @@
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_EVTopTabBar_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -704,7 +690,7 @@
 			};
 			name = Release;
 		};
-		F3D6CDB5B14538B28F508A79FC188588 /* Debug */ = {
+		F8E70AF34F9B35AA4F07C16BDD4EA576 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 785F38CC3AF578C4B5644048FD6FC330 /* EVTopTabBar.xcconfig */;
 			buildSettings = {
@@ -722,7 +708,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/EVTopTabBar/EVTopTabBar.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = EVTopTabBar;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -732,6 +717,18 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		FFA8495573D6FF44367BF57A88597336 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 785F38CC3AF578C4B5644048FD6FC330 /* EVTopTabBar.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = EVTopTabBar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -745,11 +742,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4276F2859536F65F62322205BE4972F9 /* Build configuration list for PBXNativeTarget "EVTopTabBar" */ = {
+		752FB805E11AB6106613CA84D8A03F0B /* Build configuration list for PBXNativeTarget "EVTopTabBar-EVTopTabBar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F3D6CDB5B14538B28F508A79FC188588 /* Debug */,
-				7DD5067FE35F4F469E3BE26E63440599 /* Release */,
+				A69455F8B6F7285C161A453E45DCA6D1 /* Debug */,
+				FFA8495573D6FF44367BF57A88597336 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -763,11 +760,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		90FD8F737A196B768618FF8AC916554C /* Build configuration list for PBXNativeTarget "EVTopTabBar-EVTopTabBar" */ = {
+		912AED81245AEE3DE8ED2B4B38323EFF /* Build configuration list for PBXNativeTarget "EVTopTabBar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8616E7A5C9A332336CBE5185CA057B9F /* Debug */,
-				0539314F1963B9D0C2C37F1EE7864BA8 /* Release */,
+				F8E70AF34F9B35AA4F07C16BDD4EA576 /* Debug */,
+				A05FEA9475374DF27109F58486C30FD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
