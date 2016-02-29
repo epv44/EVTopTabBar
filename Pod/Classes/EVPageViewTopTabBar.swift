@@ -5,6 +5,7 @@
 //  Created by Eric Vennaro on 2/29/16.
 //
 //
+<<<<<<< HEAD
 import UIKit
 
 public class EVPageViewTopTabBar: UIView {
@@ -174,3 +175,7 @@ public class EVPageViewTopTabBar: UIView {
 public protocol EVPageViewTopTabBarDelegate {
     func willSelectViewControllerAtIndex(index: Int, direction: UIPageViewControllerNavigationDirection)
 }
+=======
+
+import Foundation
+>>>>>>> e7ae170ad148a541b1d49f2ae61b9b75204a9122

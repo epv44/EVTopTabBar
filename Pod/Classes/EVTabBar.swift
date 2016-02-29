@@ -44,3 +44,4 @@ public extension EVTabBar where Self: UIViewController {
         pageController.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[shadow(7)]", options: [], metrics: nil, views: ["shadow" : shadowView]))
     }
 }
+
