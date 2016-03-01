@@ -3,13 +3,16 @@
 # * https://github.com/supermarin/xcpretty#usage
 
 language: objective-c
-osx_image: xcode8.0
 
+xcode_project: EVTopTabBar.xcworkspace
+xcode_scheme: EVTopTabBar-Example
+osx_image: xcode8.0
+xcode_sdk: iphonesimulator9.0
 # cache: cocoapods
 # podfile: Example/Podfile
 # before_install:
 # - gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
 script:
-- set -o pipefail && xcodebuild test -workspace Example/EVTopTabBar.xcworkspace -scheme EVTopTabBar-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
+- xcodebuild clean build test -project EVTopTabBar.xcodeproj -scheme EVTopTabBar-Example
 - pod lib lint
