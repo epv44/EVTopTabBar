@@ -53,7 +53,7 @@ var subviewControllers: [UIViewController] = []
 var shadowView = UIImageView(image: UIImage(imageLiteral: "filter-background-image"))
 ````
 
-Lastly in the view controller you have declared the above you also must implement the EVPageViewTopTabBarDelegate method ````swift willSelectViewControllerAtIndex ````This method allows for view controllers to switch and gives a space to perform any other actions.
+Now in the view controller you have declared the above you also must implement the EVPageViewTopTabBarDelegate method ````willSelectViewControllerAtIndex```` This method allows for view controllers to switch and gives a space to perform any other actions.
 
 ````swift
 extension ViewController: EVPageViewTopTabBarDelegate {
@@ -65,6 +65,42 @@ extension ViewController: EVPageViewTopTabBarDelegate {
     }
 }
 ````
+Next will want to call the ```setupPageView()```` and ````setupConstraints()```` methods in order to setup the page layout.  You can override both of these methods to create a more custom application.  
+
+Lastly you will want to setup the topTabBar you previously declared
+
+````swift
+//attributes of the topTabBar you can set
+topTabBar.fontColors = (selectedColor: UIColor.grayColor(), unselectedColor: UIColor.lightGrayColor())
+topTabBar.rightButtonText = "Events"
+topTabBar.leftButtonText = "Contacts"
+topTabBar.labelFont = UIFont(name: ".SFUIText-Regular", size: 11)!
+topTabBar.indicatorViewColor = UIColor.blueColor()
+topTabBar.backgroundColor = UIColor.whiteColor()
+topTabBar.setupUI()
+//ensure you set the topTabBar's delegate
+topTabBar.delegate = self
+//add view controllers you wish to display
+let firstVC = FirstViewController(nibName:"FirstViewController", bundle: nil)
+let secondVC = SecondViewController(nibName:"SecondViewController", bundle: nil)
+subviewControllers = [firstVC, secondVC]
+````
+
+## Project description
+
+### EVTabBar Protocol
+
+#### Methods
+
+* ````setupPageView()````` Sets the UI for the page including the UIPageViewController, shadowView and view controllers to display inside of the page view.
+* `````setupConstraints()```` Sets the initial constraints for the Page
+
+### EVPageViewTopTabBar
+
+#### Methods
+
+* ````setupUI()````` Sets the UI for the tab bar
+* `````willSelectViewControllerAtIndex(index: Int, direction: UIPageViewControllerNavigationDirection)````` Switch and gives a space to perform any other actions on transition
 
 ## Future Features
 

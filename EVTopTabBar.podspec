@@ -24,7 +24,7 @@ EVTopTabBar is a custom UIPageViewController for iOS where the page control is a
 
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/EVTopTabBar.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/epv44/EVTopTabBar.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '8.0'
