@@ -69,7 +69,7 @@ Next will want to call the ```setupPageView()``` and ```setupConstraints()``` me
 
 Lastly you will want to setup the topTabBar you previously declared
 
-````swift
+```swift
 //attributes of the topTabBar you can set
 topTabBar.fontColors = (selectedColor: UIColor.grayColor(), unselectedColor: UIColor.lightGrayColor())
 topTabBar.rightButtonText = "Events"
@@ -84,7 +84,7 @@ topTabBar.delegate = self
 let firstVC = FirstViewController(nibName:"FirstViewController", bundle: nil)
 let secondVC = SecondViewController(nibName:"SecondViewController", bundle: nil)
 subviewControllers = [firstVC, secondVC]
-````
+```
 
 ## Project description
 
