@@ -4,8 +4,8 @@
 
 language: objective-c
 
-# osx_image: xcode7.2
-# xcode_sdk: iphonesimulator9.2
+osx_image: xcode7.2
+xcode_sdk: iphonesimulator9.2
 
 # cache: cocoapods
 # podfile: Example/Podfile
@@ -15,5 +15,5 @@ before_install:
 before_script:
  - cd example
 script:
-- set -o pipefail && xcodebuild test -workspace Example/EVTopTabBar.xcworkspace -scheme EVTopTabBar-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail && xcodebuild test -workspace Example/EVTopTabBar.xcworkspace -scheme EVTopTabBar-Example -sdk iphonesimulator9.2 ONLY_ACTIVE_ARCH=NO | xcpretty
 - pod lib lint
