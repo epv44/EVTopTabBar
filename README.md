@@ -55,7 +55,7 @@ var shadowView = UIImageView(image: UIImage(imageLiteral: "filter-background-ima
 
 Now in your view controller implement the EVPageViewTopTabBarDelegate method ````willSelectViewControllerAtIndex```` This method allows for view controllers to switch and gives a space to perform any other actions.
 
-````swift
+```swift
 extension ViewController: EVPageViewTopTabBarDelegate {
 	//delegate method
     func willSelectViewControllerAtIndex(index: Int, direction: UIPageViewControllerNavigationDirection) {
@@ -64,7 +64,7 @@ extension ViewController: EVPageViewTopTabBarDelegate {
         //add whatever code you wish to occur on the transition!
     }
 }
-````
+```
 Next will want to call the ```setupPageView()``` and ```setupConstraints()``` methods in order to setup the page layout.  You can override both of these methods to create a more custom application.  
 
 Lastly you will want to setup the topTabBar you previously declared
