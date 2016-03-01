@@ -99,8 +99,8 @@ subviewControllers = [firstVC, secondVC]
 
 #### Methods
 
-* ````setupUI()````` Sets the UI for the tab bar itself
-* `````willSelectViewControllerAtIndex(index: Int, direction: UIPageViewControllerNavigationDirection)````` Switch and gives a space to perform any other actions on transition
+* ````setupUI()```` Sets the UI for the tab bar itself
+* `````willSelectViewControllerAtIndex(index: Int, direction: UIPageViewControllerNavigationDirection)````` Controls the changing of the View Controllers inside of the PageViewController and gives a space to perform any other actions on transition
 
 ## Future Features
 
