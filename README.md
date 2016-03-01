@@ -41,6 +41,36 @@ use_frameworks!
 import EVTopTabBar
 ````
 
+Implement the EVTabBar protocol and conform to it.  In order to conform to the protocol declare:
+
+````swift
+var pageController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
+//need to instantiate the topTabBar itself, later we will implement the delegate method
+var topTabBar: EVPageViewTopTabBar = EVPageViewTopTabBar()
+//array of view controllers that will be controlled by the page view controller
+var subviewControllers: [UIViewController] = []
+//image from the sample project can use any UIImage you want, this shadow is what is displayed under the tab bar.
+var shadowView = UIImageView(image: UIImage(imageLiteral: "filter-background-image"))
+````
+
+Lastly in the view controller you have declared the above you also must implement the EVPageViewTopTabBarDelegate method ````swift willSelectViewControllerAtIndex ````This method allows for view controllers to switch and gives a space to perform any other actions.
+
+````swift
+extension ViewController: EVPageViewTopTabBarDelegate {
+	//delegate method
+    func willSelectViewControllerAtIndex(index: Int, direction: UIPageViewControllerNavigationDirection) {
+    	//required line that changes the displayed view controller
+        pageController.setViewControllers([self.subviewControllers[index]], direction: direction, animated: true, completion: nil)
+        //add whatever code you wish to occur on the transition!
+    }
+}
+````
+
+## Future Features
+
+* Support for more tabs
+* More flexibilty with the shadow view
+
 ## Author
 
 Eric Vennaro, epv9@case.edu, [blog][blogLink]
