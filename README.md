@@ -53,7 +53,7 @@ var subviewControllers: [UIViewController] = []
 var shadowView = UIImageView(image: UIImage(imageLiteral: "filter-background-image"))
 ````
 
-Now in the view controller you have declared the above you also must implement the EVPageViewTopTabBarDelegate method ````willSelectViewControllerAtIndex```` This method allows for view controllers to switch and gives a space to perform any other actions.
+Now in your view controller implement the EVPageViewTopTabBarDelegate method ````willSelectViewControllerAtIndex```` This method allows for view controllers to switch and gives a space to perform any other actions.
 
 ````swift
 extension ViewController: EVPageViewTopTabBarDelegate {
@@ -92,20 +92,20 @@ subviewControllers = [firstVC, secondVC]
 
 #### Methods
 
-* ````setupPageView()````` Sets the UI for the page including the UIPageViewController, shadowView and view controllers to display inside of the page view.
-* `````setupConstraints()```` Sets the initial constraints for the Page
+* ````setupPageView()````` Sets the UI for the View Controller including the UIPageViewController, shadowView and view controllers to display inside of the page view.
+* `````setupConstraints()```` Sets the initial constraints for the View Controller
 
 ### EVPageViewTopTabBar
 
 #### Methods
 
-* ````setupUI()````` Sets the UI for the tab bar
+* ````setupUI()````` Sets the UI for the tab bar itself
 * `````willSelectViewControllerAtIndex(index: Int, direction: UIPageViewControllerNavigationDirection)````` Switch and gives a space to perform any other actions on transition
 
 ## Future Features
 
 * Support for more tabs
-* More flexibilty with the shadow view
+* More flexibility with the shadow view
 
 ## Author
 
