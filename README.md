@@ -65,7 +65,7 @@ extension ViewController: EVPageViewTopTabBarDelegate {
     }
 }
 ````
-Next will want to call the ```setupPageView()```` and ````setupConstraints()```` methods in order to setup the page layout.  You can override both of these methods to create a more custom application.  
+Next will want to call the ```setupPageView()``` and ```setupConstraints()``` methods in order to setup the page layout.  You can override both of these methods to create a more custom application.  
 
 Lastly you will want to setup the topTabBar you previously declared
 
@@ -92,8 +92,8 @@ subviewControllers = [firstVC, secondVC]
 
 #### Methods
 
-* ````setupPageView()````` Sets the UI for the View Controller including the UIPageViewController, shadowView and view controllers to display inside of the page view.
-* `````setupConstraints()```` Sets the initial constraints for the View Controller
+* ````setupPageView()```` Sets the UI for the View Controller including the UIPageViewController, shadowView and View Controllers to display inside of the Page View.
+* ````setupConstraints()```` Sets the initial constraints for the View Controller
 
 ### EVPageViewTopTabBar
 
