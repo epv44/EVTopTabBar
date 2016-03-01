@@ -20,6 +20,7 @@ class ViewController: UIViewController, EVTabBar {
         setupEVTabBar()
         setupPageView()
         setupConstraints()
+        self.title = "EVTopTabBar"
     }
     
     override func didReceiveMemoryWarning() {
