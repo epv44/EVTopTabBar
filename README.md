@@ -50,7 +50,7 @@ Eric Vennaro, epv9@case.edu, [blog][blogLink]
 EVTopTabBar is available under the [MIT License][mitLink]. See the LICENSE file for more info.
 >**Copyright &copy; 2016-present Eric Vennaro.**
 
-[img0]:https://raw.githubusercontent.com/epv44/evtoptabbar/tabBar.gif
+[img0]:https://raw.githubusercontent.com/epv44/EVTopTabBar/master/tabBar.gif
 [podLink]:http://cocoapods.org
 [blogLink]:http://www.ericvennaro.com
 [mitLink]:http://opensource.org/licenses/MIT
