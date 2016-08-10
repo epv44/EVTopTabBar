@@ -31,9 +31,9 @@ EVTopTabBar is a custom UIPageViewController for iOS where the page control is a
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'EVTopTabBar' => ['Pod/Assets/*.png']
-  }
+#  s.resource_bundles = {
+#    'EVTopTabBar' => ['Pod/Assets/*.png']
+#  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

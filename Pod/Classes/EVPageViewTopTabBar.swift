@@ -72,30 +72,30 @@ public class EVPageViewTopTabBar: UIView {
         setConstraints()
     }
     
-    internal func leftButtonWasTouched(sender: UIButton!) {
+    func leftButtonWasTouched(sender: UIButton!) {
         animateLeft()
     }
     
-    internal func rightButtonWasTouched(sender: UIButton!) {
+    func rightButtonWasTouched(sender: UIButton!) {
         animateRight()
     }
     
-    internal func respondToRightSwipe(gesture: UIGestureRecognizer) {
+    func respondToRightSwipe(gesture: UIGestureRecognizer) {
         animateRight()
     }
     
-    internal func respondToLeftSwipe(gesture: UIGestureRecognizer) {
+    func respondToLeftSwipe(gesture: UIGestureRecognizer) {
         animateLeft()
     }
     
     private func setupLeftButton() {
         leftButton.translatesAutoresizingMaskIntoConstraints = false
-        leftButton.addTarget(self, action:"leftButtonWasTouched:", forControlEvents: .TouchUpInside)
+        leftButton.addTarget(self, action: .leftButtonTapped, forControlEvents: .TouchUpInside)
     }
     
     private func setupRightButton() {
         rightButton.translatesAutoresizingMaskIntoConstraints = false
-        rightButton.addTarget(self, action:"rightButtonWasTouched:", forControlEvents: .TouchUpInside)
+        rightButton.addTarget(self, action: .rightButtonTapped, forControlEvents: .TouchUpInside)
     }
     
     private func setupIndicatorView() {
@@ -104,8 +104,8 @@ public class EVPageViewTopTabBar: UIView {
     }
     
     private func setupGestureRecognizers() {
-        let rightSwipe = UISwipeGestureRecognizer(target: self, action: "respondToRightSwipe:")
-        let leftSwipe = UISwipeGestureRecognizer(target: self, action: "respondToLeftSwipe:")
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: .respondToRightSwipe)
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: .respondToLeftSwipe)
         
         rightSwipe.direction = .Right
         leftSwipe.direction = .Left
@@ -173,4 +173,12 @@ public class EVPageViewTopTabBar: UIView {
 //MARK: - PageViewTopTabBarDelegate
 public protocol EVPageViewTopTabBarDelegate {
     func willSelectViewControllerAtIndex(index: Int, direction: UIPageViewControllerNavigationDirection)
+}
+
+//MARK: - Selector
+private extension Selector {
+    static let leftButtonTapped = #selector(EVPageViewTopTabBar.leftButtonWasTouched(_:))
+    static let rightButtonTapped = #selector(EVPageViewTopTabBar.rightButtonWasTouched(_:))
+    static let respondToRightSwipe = #selector(EVPageViewTopTabBar.respondToRightSwipe(_:))
+    static let respondToLeftSwipe = #selector(EVPageViewTopTabBar.respondToLeftSwipe(_:))
 }
