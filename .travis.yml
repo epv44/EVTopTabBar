@@ -14,5 +14,5 @@ xcode_sdk: iphonesimulator9.3
 #  - pod install --project-directory=Example
 
 script:
-- set -o pipefail && xcodebuild -workspace Example/EVTopTabBar.xcworkspace -scheme EVTopTabBar-Example -sdk iphonesimulator9.2 ONLY_ACTIVE_ARCH=NO -destination 'name=iPhone 6' | xcpretty
+- set -o pipefail && xcodebuild -workspace Example/EVTopTabBar.xcworkspace -scheme EVTopTabBar-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO -destination 'name=iPhone 6' | xcpretty
 - pod lib lint
