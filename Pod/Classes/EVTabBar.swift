@@ -6,16 +6,20 @@
 //
 //
 import UIKit
-
+///Protocol determines the layout of the tab bar
 public protocol EVTabBar: class {
+    ///UIImage that serves as deliminator between the tab bar and UIViewControllers displayed
     var shadowView: UIImageView { get set }
+    ///Array containing UIViewControllers to be displayed
     var subviewControllers: [UIViewController] { get set }
+    ///EVPageViewController itself
     var topTabBar: EVPageViewTopTabBar { get set }
+    ///UIPageViewController that serves as the base
     var pageController: UIPageViewController { get set }
 }
 
 public extension EVTabBar where Self: UIViewController {
-    
+    ///Sets up the UI of the page view and tab bar
     public func setupPageView() {
         topTabBar.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(topTabBar)
@@ -29,7 +33,7 @@ public extension EVTabBar where Self: UIViewController {
         pageController.didMoveToParentViewController(self)
         pageController.view.addSubview(shadowView)
     }
-    
+    ///Sets constraints for the view
     public func setupConstraints() {
         let views: [String:AnyObject] = ["menuBar" : topTabBar, "pageView" : pageController.view, "shadow" : shadowView]
         view.addConstraints(

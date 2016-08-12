@@ -6,16 +6,16 @@
 //
 //
 import UIKit
-
+///UIView that represents the tab EVPageViewTopTabBar
 public class EVPageViewTopTabBar: UIView {
     private let indicatorView = UIView()
     private let rightButton = UIButton()
     private let leftButton = UIButton()
     private var indicatorXPosition = NSLayoutConstraint()
     private var buttonFontColors: (selectedColor: UIColor, unselectedColor: UIColor)!
-    
+    ///Delegate for the tab bar
     public var delegate: EVPageViewTopTabBarDelegate?
-    
+    ///Stored property to set the selected and unselected font color
     public var fontColors: (selectedColor: UIColor, unselectedColor: UIColor)? {
         didSet {
             buttonFontColors = fontColors
@@ -23,26 +23,26 @@ public class EVPageViewTopTabBar: UIView {
             leftButton.setTitleColor(fontColors!.selectedColor, forState: .Normal)
         }
     }
-    
+    ///Stored property sets the text for the right UIButton
     public var rightButtonText: String? {
         didSet {
             rightButton.setTitle(rightButtonText, forState: .Normal)
         }
     }
-    
+    ///Stored property sets the text for the left UIButton
     public var leftButtonText: String? {
         didSet {
             leftButton.setTitle(leftButtonText, forState: .Normal)
         }
     }
-    
+    ///Stored property sets the font for both UIButton labels
     public var labelFont: UIFont? {
         didSet {
             rightButton.titleLabel?.font = self.labelFont
             leftButton.titleLabel?.font = self.labelFont
         }
     }
-    
+    ///Stored property sets the background color of the indicator view
     public var indicatorViewColor: UIColor? {
         didSet {
             indicatorView.backgroundColor = indicatorViewColor
@@ -50,15 +50,17 @@ public class EVPageViewTopTabBar: UIView {
     }
     
     //MARK: - Initialization
+    //init with frame
     public init() {
         super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
     }
-    
+    //init with coder
     required public init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder)
     }
     
     //MARK: - Methods
+    //Sets UI attributes for the tab bar
     public func setupUI() {
         setupRightButton()
         setupLeftButton()
@@ -148,7 +150,7 @@ public class EVPageViewTopTabBar: UIView {
         }
     }
     
-    //MARK: - Set Constraints
+    //MARK: - Constraints
     private func setConstraints() {
         let views = ["leftButton" : leftButton, "indicatorView" : indicatorView, "rightButton" : rightButton]
         self.addConstraints(
@@ -171,7 +173,14 @@ public class EVPageViewTopTabBar: UIView {
 }
 
 //MARK: - PageViewTopTabBarDelegate
+///Delegate for the tab bar
 public protocol EVPageViewTopTabBarDelegate {
+    /**
+     Controls what UIViewController is displayed
+     
+     - Parameter index: Int, array index determining which view controller is to be displayed
+     - Parameter direction: UIPageViewControllerNavigationDirection
+     */
     func willSelectViewControllerAtIndex(index: Int, direction: UIPageViewControllerNavigationDirection)
 }
 
