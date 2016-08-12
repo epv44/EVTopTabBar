@@ -56,7 +56,7 @@ public class EVPageViewTopTabBar: UIView {
     }
     //init with coder
     required public init?(coder aDecoder: NSCoder) {
-        super.init(coder)
+        super.init(coder: aDecoder)
     }
     
     //MARK: - Methods

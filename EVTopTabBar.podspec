@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "EVTopTabBar"
-  s.version          = "1.0.1"
+  s.version          = "1.0.2"
   s.homepage         = 'https://github.com/epv44/EVTopTabBar'
   s.author          = { 'Eric Vennaro' => 'epv9@case.edu' }
   s.summary          = "Custom UITabBarController with custom tabs that are at the top of the controller."
