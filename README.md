@@ -9,7 +9,6 @@
 
 EVTopTabBar is a custom UIPageViewController for iOS where the page control is at the top.  It currently supports up to 4 tabs.
 
-![Screenshot0][img0]
 ![Screenshot1][img1]
 ## Usage
 
