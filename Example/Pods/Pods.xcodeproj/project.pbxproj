@@ -16,6 +16,9 @@
 		C2FECF067A2246020A7D74511EB0DF6B /* EVTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD64934D8AD5C3BB307598F3DB5F8EB8 /* EVTabBar.swift */; };
 		CFDDD2B7DDBAD6AEA4E460BE949E2DDE /* Pods-EVTopTabBar_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 41DABA71FB9F0C7CD0EC55889C00815F /* Pods-EVTopTabBar_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D32592D3A390CEE86087F42FA38D9A96 /* EVTopTabBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BB64937E8D282D6ACF88C582132BF298 /* EVTopTabBar-dummy.m */; };
+		D43AE5F71DA4444E007B28EC /* NumberOfTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43AE5F61DA4444E007B28EC /* NumberOfTabs.swift */; };
+		D43AE6031DA55BCD007B28EC /* AnimateTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43AE6021DA55BCD007B28EC /* AnimateTransition.swift */; };
+		D45A0B461DA6B941004F5056 /* EVTabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A0B451DA6B941004F5056 /* EVTabBarDelegate.swift */; };
 		E1D076199D96B3ADB5AF1E73E6074C2F /* EVTopTabBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FB01693B902386E91B926B240363182 /* EVTopTabBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E4529A794A52AA56EE20B01FAEC5D25A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		EC84FFF3F10033C9034F7F6D67CE6863 /* EVTopTabBar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5F433745BE1422271175C852D29BA9FE /* EVTopTabBar.bundle */; };
@@ -73,6 +76,9 @@
 		C18021A7D0B023D505A45054346B2E92 /* EVTopTabBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = EVTopTabBar.modulemap; sourceTree = "<group>"; };
 		C3B23F22C20CD990C2EB4A1E5A0DF162 /* Pods-EVTopTabBar_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-EVTopTabBar_Tests.modulemap"; sourceTree = "<group>"; };
 		CD64934D8AD5C3BB307598F3DB5F8EB8 /* EVTabBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EVTabBar.swift; sourceTree = "<group>"; };
+		D43AE5F61DA4444E007B28EC /* NumberOfTabs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberOfTabs.swift; sourceTree = "<group>"; };
+		D43AE6021DA55BCD007B28EC /* AnimateTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimateTransition.swift; sourceTree = "<group>"; };
+		D45A0B451DA6B941004F5056 /* EVTabBarDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVTabBarDelegate.swift; sourceTree = "<group>"; };
 		D688C4F3CD1FE615C22B783BC48B7556 /* Pods-EVTopTabBar_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EVTopTabBar_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		D76767C65FD9CDEDB9891260120D4810 /* Pods-EVTopTabBar_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EVTopTabBar_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DAD6E231950EF0E5A94B74404E1722E6 /* Pods-EVTopTabBar_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EVTopTabBar_Example-dummy.m"; sourceTree = "<group>"; };
@@ -150,6 +156,9 @@
 			isa = PBXGroup;
 			children = (
 				E9CAA6E59092F33225C6D186D5D837A5 /* EVPageViewTopTabBar.swift */,
+				D45A0B451DA6B941004F5056 /* EVTabBarDelegate.swift */,
+				D43AE6021DA55BCD007B28EC /* AnimateTransition.swift */,
+				D43AE5F61DA4444E007B28EC /* NumberOfTabs.swift */,
 				CD64934D8AD5C3BB307598F3DB5F8EB8 /* EVTabBar.swift */,
 			);
 			path = Classes;
@@ -358,7 +367,18 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
+				TargetAttributes = {
+					C1C4D87C90AEF912E5BFC1215A109E16 = {
+						LastSwiftMigration = 0800;
+					};
+					D9E8DE613362EFA6A79C2A3E53C43980 = {
+						LastSwiftMigration = 0800;
+					};
+					ED63F66345D3DF577C1D23C42E4194D1 = {
+						LastSwiftMigration = 0800;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -427,8 +447,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACB46782842E6B72AAE19550C052790D /* EVPageViewTopTabBar.swift in Sources */,
+				D43AE5F71DA4444E007B28EC /* NumberOfTabs.swift in Sources */,
 				C2FECF067A2246020A7D74511EB0DF6B /* EVTabBar.swift in Sources */,
 				D32592D3A390CEE86087F42FA38D9A96 /* EVTopTabBar-dummy.m in Sources */,
+				D43AE6031DA55BCD007B28EC /* AnimateTransition.swift in Sources */,
+				D45A0B461DA6B941004F5056 /* EVTabBarDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,7 +483,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8A5D983DD921092913DC84DBE55A123B /* Pods-EVTopTabBar_Example.release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -481,6 +505,7 @@
 				PRODUCT_NAME = Pods_EVTopTabBar_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -500,13 +525,17 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -516,6 +545,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -534,14 +564,18 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -565,7 +599,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D76767C65FD9CDEDB9891260120D4810 /* Pods-EVTopTabBar_Tests.debug.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -587,6 +622,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -597,7 +633,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A2F92F7BC06C92FBEF323FD4D548D8C2 /* Pods-EVTopTabBar_Example.debug.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -619,6 +656,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -629,7 +667,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 785F38CC3AF578C4B5644048FD6FC330 /* EVTopTabBar.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -647,6 +685,7 @@
 				PRODUCT_NAME = EVTopTabBar;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -669,7 +708,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F1E44D633EB2F45E9FD66C64695FD765 /* Pods-EVTopTabBar_Tests.release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -690,6 +730,7 @@
 				PRODUCT_NAME = Pods_EVTopTabBar_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -700,7 +741,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 785F38CC3AF578C4B5644048FD6FC330 /* EVTopTabBar.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -719,6 +760,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

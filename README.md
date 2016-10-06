@@ -7,17 +7,17 @@
 
 ## About
 
-EVTopTabBar is a custom UIPageViewController for iOS where the page control is at the top.  It currently supports two tabs.
+EVTopTabBar is a custom UIPageViewController for iOS where the page control is at the top.  It currently supports up to 4 tabs.
 
 ![Screenshot0][img0]
-
+![Screenshot1][img1]
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory.
 
 ## Requirements
 
-* Swift 2.0+
+* Swift 3.0+
 * iOS 8.0+
 
 ## Installation
@@ -41,12 +41,13 @@ use_frameworks!
 import EVTopTabBar
 ````
 
-Implement the EVTabBar protocol and conform to it.  In order to conform to the protocol declare:
+Implement the EVTabBar protocol and conform to it (The example project has a detailed implementation).  In order to conform to the protocol declare:
 
 ````swift
 var pageController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
 //need to instantiate the topTabBar itself, later we will implement the delegate method
-var topTabBar: EVPageViewTopTabBar = EVPageViewTopTabBar()
+//enum .two, .three, .four correspond to the number of tabs you wish to display
+var topTabBar: EVPageViewTopTabBar = EVPageViewTopTabBar(for: .four)
 //array of view controllers that will be controlled by the page view controller
 var subviewControllers: [UIViewController] = []
 //image from the sample project can use any UIImage you want, this shadow is what is displayed under the tab bar.
@@ -77,13 +78,14 @@ topTabBar.leftButtonText = "Contacts"
 topTabBar.labelFont = UIFont(name: ".SFUIText-Regular", size: 11)!
 topTabBar.indicatorViewColor = UIColor.blueColor()
 topTabBar.backgroundColor = UIColor.whiteColor()
-topTabBar.setupUI()
 //ensure you set the topTabBar's delegate
 topTabBar.delegate = self
 //add view controllers you wish to display
 let firstVC = FirstViewController(nibName:"FirstViewController", bundle: nil)
 let secondVC = SecondViewController(nibName:"SecondViewController", bundle: nil)
 subviewControllers = [firstVC, secondVC]
+setupPageView()
+setupConstraints()
 ```
 
 ## Project description
@@ -99,12 +101,10 @@ subviewControllers = [firstVC, secondVC]
 
 #### Methods
 
-* ````setupUI()```` Sets the UI for the tab bar itself
 * `````willSelectViewControllerAtIndex(index: Int, direction: UIPageViewControllerNavigationDirection)````` Controls the changing of the View Controllers inside of the PageViewController and gives a space to perform any other actions on transition
 
 ## Future Features
 
-* Support for more tabs
 * More flexibility with the shadow view
 
 ## Author
@@ -117,6 +117,7 @@ EVTopTabBar is available under the [MIT License][mitLink]. See the LICENSE file 
 >**Copyright &copy; 2016-present Eric Vennaro.**
 
 [img0]:https://raw.githubusercontent.com/epv44/EVTopTabBar/master/tabBar.gif
+[img1]:https://raw.githubusercontent.com/epv44/EVTopTabBar/master/fourTabs.gif
 [podLink]:http://cocoapods.org
 [blogLink]:http://www.ericvennaro.com
 [mitLink]:http://opensource.org/licenses/MIT

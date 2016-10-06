@@ -6,188 +6,257 @@
 //
 //
 import UIKit
+
 ///UIView that represents the tab EVPageViewTopTabBar
-public class EVPageViewTopTabBar: UIView {
-    private let indicatorView = UIView()
-    private let rightButton = UIButton()
-    private let leftButton = UIButton()
-    private var indicatorXPosition = NSLayoutConstraint()
-    private var buttonFontColors: (selectedColor: UIColor, unselectedColor: UIColor)!
+open class EVPageViewTopTabBar: UIView  {
+    fileprivate var tabs: NumberOfTabs
+    fileprivate var indicatorXPosition = NSLayoutConstraint()
+    fileprivate var buttonFontColors: (selectedColor: UIColor, unselectedColor: UIColor)?
     ///Delegate for the tab bar
-    public var delegate: EVPageViewTopTabBarDelegate?
+    open weak var delegate: EVTabBarDelegate?
+    internal var currentState: Int
+    fileprivate var indicatorView: UIView? {
+        didSet {
+            indicatorView?.translatesAutoresizingMaskIntoConstraints = false
+            indicatorView?.layer.cornerRadius = 4
+            addSubview(indicatorView!)
+        }
+    }
+    fileprivate var rightButton: UIButton? {
+        didSet {
+            rightButton?.translatesAutoresizingMaskIntoConstraints = false
+            rightButton?.addTarget(self, action: .buttonTapped, for: .touchUpInside)
+            addSubview(rightButton!)
+        }
+    }
+    fileprivate var leftButton: UIButton? {
+        didSet {
+            leftButton?.translatesAutoresizingMaskIntoConstraints = false
+            leftButton?.addTarget(self, action: .buttonTapped, for: .touchUpInside)
+            addSubview(leftButton!)
+        }
+    }
+    fileprivate var middleButton: UIButton? {
+        didSet {
+            middleButton?.translatesAutoresizingMaskIntoConstraints = false
+            middleButton?.addTarget(self, action: .buttonTapped, for: .touchUpInside)
+            addSubview(middleButton!)
+        }
+    }
+    fileprivate var middleRightButton: UIButton? {
+        didSet {
+            middleRightButton?.translatesAutoresizingMaskIntoConstraints = false
+            middleRightButton?.addTarget(self, action: .buttonTapped, for: .touchUpInside)
+            addSubview(middleRightButton!)
+        }
+    }
     ///Stored property to set the selected and unselected font color
-    public var fontColors: (selectedColor: UIColor, unselectedColor: UIColor)? {
+    open var fontColors: (selectedColor: UIColor, unselectedColor: UIColor)? {
         didSet {
             buttonFontColors = fontColors
-            rightButton.setTitleColor(fontColors!.unselectedColor, forState: .Normal)
-            leftButton.setTitleColor(fontColors!.selectedColor, forState: .Normal)
+            rightButton?.setTitleColor(fontColors!.unselectedColor, for: UIControlState())
+            middleButton?.setTitleColor(fontColors!.unselectedColor, for: UIControlState())
+            leftButton?.setTitleColor(fontColors!.selectedColor, for: UIControlState())
+            middleRightButton?.setTitleColor(fontColors!.unselectedColor, for: UIControlState())
         }
     }
     ///Stored property sets the text for the right UIButton
-    public var rightButtonText: String? {
+    open var rightButtonText: String? {
         didSet {
-            rightButton.setTitle(rightButtonText, forState: .Normal)
+            rightButton?.setTitle(rightButtonText, for: UIControlState())
+            setNeedsLayout()
         }
     }
     ///Stored property sets the text for the left UIButton
-    public var leftButtonText: String? {
+    open var leftButtonText: String? {
         didSet {
-            leftButton.setTitle(leftButtonText, forState: .Normal)
+            leftButton?.setTitle(leftButtonText, for: UIControlState())
+            setNeedsLayout()
         }
     }
-    ///Stored property sets the font for both UIButton labels
-    public var labelFont: UIFont? {
+    
+    ///Stored property sets the text for the middle UIButton
+    open var middleButtonText: String? {
         didSet {
-            rightButton.titleLabel?.font = self.labelFont
-            leftButton.titleLabel?.font = self.labelFont
+            middleButton?.setTitle(middleButtonText, for: UIControlState())
+            setNeedsLayout()
+        }
+    }
+    
+    open var middleRightButtonText: String? {
+        didSet {
+            middleRightButton?.setTitle(middleRightButtonText, for: UIControlState())
+            setNeedsLayout()
+        }
+    }
+    
+    ///Stored property sets the font for both UIButton labels
+    open var labelFont: UIFont? {
+        didSet {
+            rightButton?.titleLabel?.font = labelFont
+            leftButton?.titleLabel?.font = labelFont
+            middleButton?.titleLabel?.font = labelFont
+            middleRightButton?.titleLabel?.font = labelFont
+            setNeedsLayout()
         }
     }
     ///Stored property sets the background color of the indicator view
-    public var indicatorViewColor: UIColor? {
+    open var indicatorViewColor: UIColor? {
         didSet {
-            indicatorView.backgroundColor = indicatorViewColor
+            indicatorView?.backgroundColor = indicatorViewColor
+            setNeedsLayout()
         }
     }
     
     //MARK: - Initialization
-    //init with frame
-    public init() {
-        super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+    ///init with frame
+    public init(for tabs: NumberOfTabs) {
+        self.tabs = tabs
+        currentState = 111
+        super.init(frame: CGRect.zero)
+        setupUI()
     }
-    //init with coder
+    ///init with coder
     required public init?(coder aDecoder: NSCoder) {
+        tabs = .two
+        currentState = 111
         super.init(coder: aDecoder)
+        setupUI()
     }
     
     //MARK: - Methods
     //Sets UI attributes for the tab bar
-    public func setupUI() {
-        setupRightButton()
-        setupLeftButton()
-        setupIndicatorView()
+    private func setupUI() {
+        indicatorView = UIView()
+        switch tabs {
+        case .two:
+            rightButton = UIButton()
+            leftButton = UIButton()
+            leftButton?.tag = 111
+            rightButton?.tag = 222
+        case .three:
+            rightButton = UIButton()
+            leftButton = UIButton()
+            middleButton = UIButton()
+            leftButton?.tag = 111
+            middleButton?.tag = 222
+            rightButton?.tag = 333
+        case .four:
+            rightButton = UIButton()
+            leftButton = UIButton()
+            middleButton = UIButton()
+            middleRightButton = UIButton()
+            leftButton?.tag = 111
+            middleButton?.tag = 222
+            middleRightButton?.tag = 333
+            rightButton?.tag = 444
+        }
         setupGestureRecognizers()
-        
-        self.addSubview(leftButton)
-        self.addSubview(rightButton)
-        self.addSubview(indicatorView)
-        
         setConstraints()
     }
     
-    func leftButtonWasTouched(sender: UIButton!) {
-        animateLeft()
+    func buttonWasTouched(_ sender: UIButton!) {
+        animate(to: sender.tag)
+    }
+
+    func respondToRightSwipe(_ gesture: UIGestureRecognizer) {
+        if currentState.modTen < rightButton!.tag.modTen {
+            animate(to: (currentState.modTen + 1).toTag)
+        }
     }
     
-    func rightButtonWasTouched(sender: UIButton!) {
-        animateRight()
+    func respondToLeftSwipe(_ gesture: UIGestureRecognizer) {
+        if currentState.modTen > leftButton!.tag.modTen {
+            animate(to: (currentState.modTen - 1).toTag)
+        }
     }
     
-    func respondToRightSwipe(gesture: UIGestureRecognizer) {
-        animateRight()
-    }
-    
-    func respondToLeftSwipe(gesture: UIGestureRecognizer) {
-        animateLeft()
-    }
-    
-    private func setupLeftButton() {
-        leftButton.translatesAutoresizingMaskIntoConstraints = false
-        leftButton.addTarget(self, action: .leftButtonTapped, forControlEvents: .TouchUpInside)
-    }
-    
-    private func setupRightButton() {
-        rightButton.translatesAutoresizingMaskIntoConstraints = false
-        rightButton.addTarget(self, action: .rightButtonTapped, forControlEvents: .TouchUpInside)
-    }
-    
-    private func setupIndicatorView() {
-        indicatorView.translatesAutoresizingMaskIntoConstraints = false
-        indicatorView.layer.cornerRadius = 4
-    }
-    
-    private func setupGestureRecognizers() {
+    fileprivate func setupGestureRecognizers() {
         let rightSwipe = UISwipeGestureRecognizer(target: self, action: .respondToRightSwipe)
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: .respondToLeftSwipe)
         
-        rightSwipe.direction = .Right
-        leftSwipe.direction = .Left
+        rightSwipe.direction = .right
+        leftSwipe.direction = .left
         
-        self.addGestureRecognizer(rightSwipe)
-        self.addGestureRecognizer(leftSwipe)
-    }
-    
-    private func animateRight() {
-        if let topBarDelegate = delegate {
-            topBarDelegate.willSelectViewControllerAtIndex(1, direction: .Forward)
-            UIView.animateWithDuration(0.5, delay: 0, options: .CurveEaseInOut, animations: {
-                self.removeConstraint(self.indicatorXPosition)
-                self.indicatorXPosition = NSLayoutConstraint(item: self.indicatorView, attribute: .CenterX, relatedBy: .Equal, toItem: self.rightButton, attribute: .CenterX, multiplier: 1, constant: 0)
-                self.addConstraint(self.indicatorXPosition)
-                self.layoutIfNeeded()
-                }, completion: { void in
-                    UIView.animateWithDuration(0.5, delay: 0, options: .CurveEaseIn, animations: {
-                        self.rightButton.setTitleColor(self.buttonFontColors.selectedColor, forState: .Normal)
-                        self.leftButton.setTitleColor(self.buttonFontColors.unselectedColor, forState: .Normal)
-                        }, completion: nil)
-            })
-        }
-    }
-    
-    private func animateLeft() {
-        if let topBarDelegate = delegate {
-            topBarDelegate.willSelectViewControllerAtIndex(0, direction: .Reverse)
-            UIView.animateWithDuration(0.5, delay: 0, options: .CurveEaseInOut, animations: {
-                self.removeConstraint(self.indicatorXPosition)
-                self.indicatorXPosition = NSLayoutConstraint(item: self.indicatorView, attribute: .CenterX, relatedBy: .Equal, toItem: self.leftButton, attribute: .CenterX, multiplier: 1, constant: 0)
-                self.addConstraint(self.indicatorXPosition)
-                self.layoutIfNeeded()
-                }, completion: { void in
-                    UIView.animateWithDuration(0.5, delay: 0, options: .CurveEaseIn, animations: {
-                        self.rightButton.setTitleColor(self.buttonFontColors.unselectedColor, forState: .Normal)
-                        self.leftButton.setTitleColor(self.buttonFontColors.selectedColor, forState: .Normal)
-                        }, completion: nil)
-            })
-        }
+        addGestureRecognizer(rightSwipe)
+        addGestureRecognizer(leftSwipe)
     }
     
     //MARK: - Constraints
-    private func setConstraints() {
-        let views = ["leftButton" : leftButton, "indicatorView" : indicatorView, "rightButton" : rightButton]
-        self.addConstraints(
-            NSLayoutConstraint.constraintsWithVisualFormat("V:|-9-[leftButton][indicatorView(==3)]-9-|", options: [], metrics: nil, views: views))
-        self.addConstraints(
-            NSLayoutConstraint.constraintsWithVisualFormat("[indicatorView(==20)]", options: [], metrics: nil, views: views))
-        self.addConstraint(
-            NSLayoutConstraint(item: leftButton, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .Width, multiplier: 1, constant: 100))
-        indicatorXPosition = NSLayoutConstraint(item: indicatorView, attribute: .CenterX, relatedBy: .Equal, toItem: leftButton, attribute: .CenterX, multiplier: 1, constant: 0)
-        self.addConstraint(indicatorXPosition)
-        self.addConstraint(
-            NSLayoutConstraint(item: leftButton, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: -70))
-        self.addConstraint(
-            NSLayoutConstraint(item: rightButton, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .Width, multiplier: 1, constant: 100))
-        self.addConstraint(
-            NSLayoutConstraint(item: rightButton, attribute: .Leading, relatedBy: .Equal, toItem: leftButton, attribute: .Trailing, multiplier: 1, constant: 30))
-        self.addConstraints(
-            NSLayoutConstraint.constraintsWithVisualFormat("V:|-9-[rightButton]-12-|", options: [], metrics: nil, views: views))
+    fileprivate func setConstraints() {
+        guard let leftButton = leftButton, let rightButton = rightButton, let indicatorView = indicatorView else {
+            NSLog("Error: must set views in order to establish constraints")
+            return
+        }
+        var views: [String: AnyObject] = [:]
+        
+        switch tabs {
+        case .two:
+            views = ["leftButton" : leftButton, "indicatorView" : indicatorView, "rightButton" : rightButton]
+            addConstraint(NSLayoutConstraint(item: leftButton, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: -70))
+            addConstraint(NSLayoutConstraint(item: rightButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: 100))
+            addConstraint(NSLayoutConstraint(item: rightButton, attribute: .leading, relatedBy: .equal, toItem: leftButton, attribute: .trailing, multiplier: 1, constant: 30))
+            addConstraint(NSLayoutConstraint(item: leftButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: 100))
+        case .three:
+            views = ["leftButton" : leftButton, "indicatorView" : indicatorView, "rightButton" : rightButton, "middleButton" : middleButton!]
+            addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|-40-[leftButton]-[middleButton(==leftButton)]-[rightButton(==leftButton)]-40-|", options: [], metrics: nil, views: views))
+            addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-9-[middleButton]-12-|", options: [], metrics: nil, views: views))
+        case .four:
+            views = ["leftButton" : leftButton, "indicatorView" : indicatorView, "rightButton" : rightButton, "middleButton" : middleButton!, "middleRightButton" : middleRightButton!]
+            addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|-[leftButton]-[middleButton(==leftButton)]-[middleRightButton(==leftButton)]-[rightButton(==leftButton)]-|", options: [], metrics: nil, views: views))
+            addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-9-[middleButton]-12-|", options: [], metrics: nil, views: views))
+            addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-9-[middleRightButton]-12-|", options: [], metrics: nil, views: views))
+        }
+
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-9-[leftButton][indicatorView(==3)]-9-|", options: [], metrics: nil, views: views))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "[indicatorView(==20)]", options: [], metrics: nil, views: views))
+        indicatorXPosition = NSLayoutConstraint(item: indicatorView, attribute: .centerX, relatedBy: .equal, toItem: leftButton, attribute: .centerX, multiplier: 1, constant: 0)
+        addConstraint(indicatorXPosition)
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-9-[rightButton]-12-|", options: [], metrics: nil, views: views))
     }
 }
 
-//MARK: - PageViewTopTabBarDelegate
-///Delegate for the tab bar
-public protocol EVPageViewTopTabBarDelegate {
-    /**
-     Controls what UIViewController is displayed
-     
-     - Parameter index: Int, array index determining which view controller is to be displayed
-     - Parameter direction: UIPageViewControllerNavigationDirection
-     */
-    func willSelectViewControllerAtIndex(index: Int, direction: UIPageViewControllerNavigationDirection)
+extension EVPageViewTopTabBar: AnimateTransition {
+    internal func animate(to newState: Int) {
+        let direction: UIPageViewControllerNavigationDirection = newState.modTen - currentState.modTen > 0 ? .forward : .reverse
+        
+        guard let fromButton = viewWithTag(currentState) as? UIButton, let toButton = viewWithTag(newState) as? UIButton else {
+            NSLog("Error, do not use tags 111, 222, 333, 444 these are used to identify buttons in EVTopTabBar")
+            return
+        }
+        
+        let constraint = NSLayoutConstraint(item: indicatorView!, attribute: .centerX, relatedBy: .equal, toItem: toButton, attribute: .centerX, multiplier: 1, constant: 0)
+        
+        if let topBarDelegate = delegate {
+            topBarDelegate.willSelectViewControllerAtIndex(newState.modTen - 1, direction: direction)
+            UIView.animate(withDuration: 0.5, delay: 0, options: UIViewAnimationOptions(), animations: {
+                self.removeConstraint(self.indicatorXPosition)
+                self.indicatorXPosition = constraint
+                self.addConstraint(self.indicatorXPosition)
+                self.layoutIfNeeded()
+                }, completion: { finished in
+                    fromButton.setTitleColor(self.buttonFontColors?.unselectedColor, for: UIControlState())
+                    toButton.setTitleColor(self.buttonFontColors?.selectedColor, for: UIControlState())
+                }
+            )
+        }
+        currentState = newState
+    }
 }
 
 //MARK: - Selector
 private extension Selector {
-    static let leftButtonTapped = #selector(EVPageViewTopTabBar.leftButtonWasTouched(_:))
-    static let rightButtonTapped = #selector(EVPageViewTopTabBar.rightButtonWasTouched(_:))
+    static let buttonTapped = #selector(EVPageViewTopTabBar.buttonWasTouched(_:))
     static let respondToRightSwipe = #selector(EVPageViewTopTabBar.respondToRightSwipe(_:))
     static let respondToLeftSwipe = #selector(EVPageViewTopTabBar.respondToLeftSwipe(_:))
+}
+
+private extension Int {
+    var modTen: Int {
+        return self % 10
+    }
+    
+    var toTag: Int {
+        return (self + (self * 10) + (self * 100))
+    }
 }

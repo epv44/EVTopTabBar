@@ -6,9 +6,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FourthViewController" customModule="EVTopTabBar_Example" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="iN0-l3-epB" id="IJB-AU-LVH"/>
+                <outlet property="view" destination="iN0-l3-epB" id="uN6-g5-JDD"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -16,21 +16,22 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYz-aM-BAy">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fourth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeb-3s-mya">
                     <constraints>
-                        <constraint firstAttribute="width" constant="34" id="TqS-ov-gbg"/>
-                        <constraint firstAttribute="height" constant="21" id="ejO-Xn-L7C"/>
+                        <constraint firstAttribute="width" constant="55" id="W2N-Tf-Dg2"/>
+                        <constraint firstAttribute="height" constant="21" id="cK6-15-JD9"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="GYz-aM-BAy" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="BfJ-y0-LoG"/>
-                <constraint firstItem="GYz-aM-BAy" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="V1Y-eD-qPQ"/>
+                <constraint firstItem="oeb-3s-mya" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="55v-Bn-MqN"/>
+                <constraint firstItem="oeb-3s-mya" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Q2z-aC-8Ki"/>
             </constraints>
+            <point key="canvasLocation" x="35.5" y="63.5"/>
         </view>
     </objects>
 </document>

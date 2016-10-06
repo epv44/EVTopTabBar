@@ -10,14 +10,31 @@ import UIKit
 import EVTopTabBar
 
 class ViewController: UIViewController, EVTabBar {
-    var pageController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
-    var topTabBar: EVPageViewTopTabBar = EVPageViewTopTabBar()
+    var pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+    var topTabBar: EVPageViewTopTabBar? {
+        didSet {
+            topTabBar?.fontColors = (selectedColor: UIColor.gray, unselectedColor: UIColor.lightGray)
+            topTabBar?.rightButtonText = "Events"
+            topTabBar?.leftButtonText = "Contacts"
+            topTabBar?.middleButtonText = "Tasks"
+            topTabBar?.middleRightButtonText = "Locations"
+            topTabBar?.labelFont = UIFont(name: "Helvetica", size: 11)!
+            topTabBar?.indicatorViewColor = UIColor.blue
+            topTabBar?.backgroundColor = UIColor.white
+            topTabBar?.delegate = self
+        }
+    }
     var subviewControllers: [UIViewController] = []
-    var shadowView = UIImageView(image: UIImage(imageLiteral: "filter-background-image"))
+    var shadowView = UIImageView(image: #imageLiteral(resourceName: "filter-background-image"))
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupEVTabBar()
+        topTabBar = EVPageViewTopTabBar(for: .four)
+        let firstVC = FirstViewController(nibName:"FirstViewController", bundle: nil)
+        let secondVC = SecondViewController(nibName:"SecondViewController", bundle: nil)
+        let thirdVC = ThirdViewController(nibName: "ThirdViewController", bundle: nil)
+        let fourthVC = FourthViewController(nibName: "FourthViewController", bundle: nil)
+        subviewControllers = [firstVC, secondVC, thirdVC, fourthVC]
         setupPageView()
         setupConstraints()
         self.title = "EVTopTabBar"
@@ -26,26 +43,15 @@ class ViewController: UIViewController, EVTabBar {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    private func setupEVTabBar() {
-        topTabBar.fontColors = (selectedColor: UIColor.grayColor(), unselectedColor: UIColor.lightGrayColor())
-        topTabBar.rightButtonText = "Events"
-        topTabBar.leftButtonText = "Contacts"
-        topTabBar.labelFont = UIFont(name: ".SFUIText-Regular", size: 11)!
-        topTabBar.indicatorViewColor = UIColor.blueColor()
-        topTabBar.backgroundColor = UIColor.whiteColor()
-        topTabBar.setupUI()
-        topTabBar.delegate = self
-        
-        let firstVC = FirstViewController(nibName:"FirstViewController", bundle: nil)
-        let secondVC = SecondViewController(nibName:"SecondViewController", bundle: nil)
-        subviewControllers = [firstVC, secondVC]
-    }
 }
 
-//MARK: PageViewTopTabBarDelegate
-extension ViewController: EVPageViewTopTabBarDelegate {
-    func willSelectViewControllerAtIndex(index: Int, direction: UIPageViewControllerNavigationDirection) {
-        pageController.setViewControllers([self.subviewControllers[index]], direction: direction, animated: true, completion: nil)
+//MARK: EVTabBarDataSource
+extension ViewController: EVTabBarDelegate {
+    func willSelectViewControllerAtIndex(_ index: Int, direction: UIPageViewControllerNavigationDirection) {
+        if index > subviewControllers.count {
+            pageController.setViewControllers([subviewControllers[subviewControllers.count - 1]], direction: direction, animated: true, completion: nil)
+        } else {
+            pageController.setViewControllers([subviewControllers[index]], direction: direction, animated: true, completion: nil)
+        }
     }
 }

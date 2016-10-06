@@ -8,34 +8,18 @@
 
 Pod::Spec.new do |s|
   s.name             = "EVTopTabBar"
-  s.version          = "1.0.2"
+  s.version          = "2.0.0"
   s.homepage         = 'https://github.com/epv44/EVTopTabBar'
   s.author          = { 'Eric Vennaro' => 'epv9@case.edu' }
   s.summary          = "Custom UITabBarController with custom tabs that are at the top of the controller."
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = <<-DESC
 EVTopTabBar is a custom UIPageViewController for iOS where the page control is at the top.
                        DESC
 
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.source           = { :git => "https://github.com/epv44/EVTopTabBar.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
   s.platform     = :ios, '8.0'
   s.requires_arc = true
-
   s.source_files = 'Pod/Classes/**/*'
-#  s.resource_bundles = {
-#    'EVTopTabBar' => ['Pod/Assets/*.png']
-#  }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'UIKit', 'Foundation'
 end
