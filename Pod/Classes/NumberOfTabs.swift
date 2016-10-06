@@ -23,7 +23,6 @@ public enum NumberOfTabs {
         default:
             NSLog("Error: incorrect number of items in array")
             return .two
-            break
         }
     }
 }
