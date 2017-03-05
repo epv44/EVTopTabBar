@@ -1,5 +1,5 @@
 PODS:
-  - EVTopTabBar (0.1.0)
+  - EVTopTabBar (2.0.1)
 
 DEPENDENCIES:
   - EVTopTabBar (from `../`)
@@ -9,6 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  EVTopTabBar: 047372ca29284313fb9a7af0dbeb551ff6dfa5dc
+  EVTopTabBar: 62bb3fa53c51340e97876b7093be91a5b8fd2c32
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: f27c9b9600c8a9f8852a7b12c65a8587e1b8c968
+
+COCOAPODS: 1.2.0

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5D496BBC2E0C88FCAB744F3E /* Pods_EVTopTabBar_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB1964E22D0F22F600590F /* Pods_EVTopTabBar_Tests.framework */; };
+		5496816DFACEC03EA7428376 /* Pods_EVTopTabBar_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AFB860CEFDB5DE5F0353D25 /* Pods_EVTopTabBar_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
@@ -22,7 +22,7 @@
 		D43AE5FB1DA55663007B28EC /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43AE5FA1DA55663007B28EC /* FourthViewController.swift */; };
 		D43AE5FD1DA557D0007B28EC /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D43AE5FC1DA557D0007B28EC /* ThirdViewController.xib */; };
 		D43AE6001DA557EB007B28EC /* FourthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D43AE5FF1DA557EB007B28EC /* FourthViewController.xib */; };
-		F488471C6828F9A4DF6B93B6 /* Pods_EVTopTabBar_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCC0C1E89A6756B20CE8D9E /* Pods_EVTopTabBar_Example.framework */; };
+		E23582C659F9C0330E599A32 /* Pods_EVTopTabBar_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 698350EDBCFD4DED7C4FB60D /* Pods_EVTopTabBar_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		12825ECF76A716EC562D849F /* Pods-EVTopTabBar_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EVTopTabBar_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-EVTopTabBar_Example/Pods-EVTopTabBar_Example.release.xcconfig"; sourceTree = "<group>"; };
+		17FB54BFDCCA4A109CAB51B8 /* Pods-EVTopTabBar_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EVTopTabBar_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EVTopTabBar_Example/Pods-EVTopTabBar_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		287D8B775E530C406BB7C85E /* EVTopTabBar.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = EVTopTabBar.podspec; path = ../EVTopTabBar.podspec; sourceTree = "<group>"; };
 		3528F8C74A8BBF0137CE8E11 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		3EDB1964E22D0F22F600590F /* Pods_EVTopTabBar_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EVTopTabBar_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4CCC0C1E89A6756B20CE8D9E /* Pods_EVTopTabBar_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EVTopTabBar_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AFB860CEFDB5DE5F0353D25 /* Pods_EVTopTabBar_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EVTopTabBar_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* EVTopTabBar_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EVTopTabBar_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,9 +49,11 @@
 		607FACE51AFB9204008FA782 /* EVTopTabBar_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EVTopTabBar_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		70008698F0FC4A37D0EA4922 /* Pods-EVTopTabBar_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EVTopTabBar_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EVTopTabBar_Tests/Pods-EVTopTabBar_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		941E0442CE4EDD89272F4F41 /* Pods-EVTopTabBar_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EVTopTabBar_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EVTopTabBar_Tests/Pods-EVTopTabBar_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		698350EDBCFD4DED7C4FB60D /* Pods_EVTopTabBar_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EVTopTabBar_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79B3B5373D461734B63C027E /* Pods-EVTopTabBar_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EVTopTabBar_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-EVTopTabBar_Example/Pods-EVTopTabBar_Example.release.xcconfig"; sourceTree = "<group>"; };
+		A108EE9C715C596CE5063C1D /* Pods-EVTopTabBar_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EVTopTabBar_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EVTopTabBar_Tests/Pods-EVTopTabBar_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B1BF18011CC032729A082DF1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		C99519D472CF65CCCD30F29A /* Pods-EVTopTabBar_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EVTopTabBar_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EVTopTabBar_Tests/Pods-EVTopTabBar_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D41C20701C84EF7E005A0147 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		D41C20741C84EFCE005A0147 /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		D41C20761C84EFD9005A0147 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -62,7 +63,6 @@
 		D43AE5FA1DA55663007B28EC /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		D43AE5FC1DA557D0007B28EC /* ThirdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
 		D43AE5FF1DA557EB007B28EC /* FourthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FourthViewController.xib; sourceTree = "<group>"; };
-		E7A0E6CF759F7803A30EC57F /* Pods-EVTopTabBar_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EVTopTabBar_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EVTopTabBar_Example/Pods-EVTopTabBar_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F488471C6828F9A4DF6B93B6 /* Pods_EVTopTabBar_Example.framework in Frameworks */,
+				5496816DFACEC03EA7428376 /* Pods_EVTopTabBar_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D496BBC2E0C88FCAB744F3E /* Pods_EVTopTabBar_Tests.framework in Frameworks */,
+				E23582C659F9C0330E599A32 /* Pods_EVTopTabBar_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,8 +92,8 @@
 				607FACD21AFB9204008FA782 /* Example for EVTopTabBar */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				FF6DA9905DB765D51269EA6A /* Pods */,
-				C473DC0FAD709386BBC861AF /* Frameworks */,
+				D32FCD0AFDCEDAA8C6ED95D5 /* Pods */,
+				B7852F7FBF5823127C6A9980 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,13 +154,24 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		C473DC0FAD709386BBC861AF /* Frameworks */ = {
+		B7852F7FBF5823127C6A9980 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4CCC0C1E89A6756B20CE8D9E /* Pods_EVTopTabBar_Example.framework */,
-				3EDB1964E22D0F22F600590F /* Pods_EVTopTabBar_Tests.framework */,
+				3AFB860CEFDB5DE5F0353D25 /* Pods_EVTopTabBar_Example.framework */,
+				698350EDBCFD4DED7C4FB60D /* Pods_EVTopTabBar_Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D32FCD0AFDCEDAA8C6ED95D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17FB54BFDCCA4A109CAB51B8 /* Pods-EVTopTabBar_Example.debug.xcconfig */,
+				79B3B5373D461734B63C027E /* Pods-EVTopTabBar_Example.release.xcconfig */,
+				C99519D472CF65CCCD30F29A /* Pods-EVTopTabBar_Tests.debug.xcconfig */,
+				A108EE9C715C596CE5063C1D /* Pods-EVTopTabBar_Tests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		D41C20721C84EF8E005A0147 /* Page View Controller */ = {
@@ -228,17 +239,6 @@
 			name = "Fourth View Controller";
 			sourceTree = "<group>";
 		};
-		FF6DA9905DB765D51269EA6A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E7A0E6CF759F7803A30EC57F /* Pods-EVTopTabBar_Example.debug.xcconfig */,
-				12825ECF76A716EC562D849F /* Pods-EVTopTabBar_Example.release.xcconfig */,
-				941E0442CE4EDD89272F4F41 /* Pods-EVTopTabBar_Tests.debug.xcconfig */,
-				70008698F0FC4A37D0EA4922 /* Pods-EVTopTabBar_Tests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -246,12 +246,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "EVTopTabBar_Example" */;
 			buildPhases = (
-				D21DF4AA61B7C22A2F734F98 /* Check Pods Manifest.lock */,
+				E71C32ACE728D4A92ECDBC8D /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				1A7FEF842869E379F11FB109 /* Embed Pods Frameworks */,
-				97B878EB95B9A7CB5558FC27 /* Copy Pods Resources */,
+				DE81C3C0769D76A3CFDACF54 /* [CP] Embed Pods Frameworks */,
+				F16A95DB9436C6B275AA89C9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,12 +266,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "EVTopTabBar_Tests" */;
 			buildPhases = (
-				AC56CE841AD68A1A8712699D /* Check Pods Manifest.lock */,
+				F904D01B8131AC1D7D21B706 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				EEF97A9C6D311C6F2E533183 /* Embed Pods Frameworks */,
-				CF4C0C83B4738F06B91D6DC8 /* Copy Pods Resources */,
+				E847CC452CFE29EC084904C9 /* [CP] Embed Pods Frameworks */,
+				0E2AFF07EC3A4CF209E98B74 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -295,8 +295,8 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 62LB893NNW;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -350,59 +350,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1A7FEF842869E379F11FB109 /* Embed Pods Frameworks */ = {
+		0E2AFF07EC3A4CF209E98B74 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EVTopTabBar_Example/Pods-EVTopTabBar_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		97B878EB95B9A7CB5558FC27 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EVTopTabBar_Example/Pods-EVTopTabBar_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AC56CE841AD68A1A8712699D /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		CF4C0C83B4738F06B91D6DC8 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,34 +365,79 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EVTopTabBar_Tests/Pods-EVTopTabBar_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D21DF4AA61B7C22A2F734F98 /* Check Pods Manifest.lock */ = {
+		DE81C3C0769D76A3CFDACF54 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EVTopTabBar_Example/Pods-EVTopTabBar_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EEF97A9C6D311C6F2E533183 /* Embed Pods Frameworks */ = {
+		E71C32ACE728D4A92ECDBC8D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E847CC452CFE29EC084904C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EVTopTabBar_Tests/Pods-EVTopTabBar_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F16A95DB9436C6B275AA89C9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EVTopTabBar_Example/Pods-EVTopTabBar_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F904D01B8131AC1D7D21B706 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -525,7 +525,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -565,7 +565,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -575,11 +575,11 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7A0E6CF759F7803A30EC57F /* Pods-EVTopTabBar_Example.debug.xcconfig */;
+			baseConfigurationReference = 17FB54BFDCCA4A109CAB51B8 /* Pods-EVTopTabBar_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 62LB893NNW;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = EVTopTabBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -591,11 +591,11 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12825ECF76A716EC562D849F /* Pods-EVTopTabBar_Example.release.xcconfig */;
+			baseConfigurationReference = 79B3B5373D461734B63C027E /* Pods-EVTopTabBar_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 62LB893NNW;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = EVTopTabBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -607,7 +607,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 941E0442CE4EDD89272F4F41 /* Pods-EVTopTabBar_Tests.debug.xcconfig */;
+			baseConfigurationReference = C99519D472CF65CCCD30F29A /* Pods-EVTopTabBar_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -628,7 +628,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70008698F0FC4A37D0EA4922 /* Pods-EVTopTabBar_Tests.release.xcconfig */;
+			baseConfigurationReference = A108EE9C715C596CE5063C1D /* Pods-EVTopTabBar_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

@@ -1,6 +1,6 @@
 {
   "name": "EVTopTabBar",
-  "version": "0.1.0",
+  "version": "2.0.1",
   "homepage": "https://github.com/epv44/EVTopTabBar",
   "authors": {
     "Eric Vennaro": "epv9@case.edu"
@@ -9,17 +9,16 @@
   "description": "EVTopTabBar is a custom UIPageViewController for iOS where the page control is at the top.",
   "license": "MIT",
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/EVTopTabBar.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/epv44/EVTopTabBar.git",
+    "tag": "2.0.1"
   },
   "platforms": {
     "ios": "8.0"
   },
   "requires_arc": true,
   "source_files": "Pod/Classes/**/*",
-  "resource_bundles": {
-    "EVTopTabBar": [
-      "Pod/Assets/*.png"
-    ]
-  }
+  "frameworks": [
+    "UIKit",
+    "Foundation"
+  ]
 }

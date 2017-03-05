@@ -1,11 +1,11 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'EVTopTabBar_Example', :exclusive => true do
+target 'EVTopTabBar_Example' do
   pod 'EVTopTabBar', :path => '../'
 end
 
-target 'EVTopTabBar_Tests', :exclusive => true do
+target 'EVTopTabBar_Tests' do
   pod 'EVTopTabBar', :path => '../'
 
   

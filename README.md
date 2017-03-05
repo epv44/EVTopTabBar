@@ -17,7 +17,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Requirements
 
 * Swift 3.0+
-* iOS 8.0+
+* iOS 9.0+
 
 ## Installation
 
@@ -33,6 +33,9 @@ Also include
 ```ruby
 use_frameworks!
 ```
+
+## Documentation
+Read the [docs][docsLink]. Generated with [jazzy](https://github.com/realm/jazzy)
 
 ## Getting Started
 
@@ -120,3 +123,4 @@ EVTopTabBar is available under the [MIT License][mitLink]. See the LICENSE file 
 [podLink]:http://cocoapods.org
 [blogLink]:http://www.ericvennaro.com
 [mitLink]:http://opensource.org/licenses/MIT
+[docsLink]:https://epv44.github.io/docs/EVTopTabBar/index.html
