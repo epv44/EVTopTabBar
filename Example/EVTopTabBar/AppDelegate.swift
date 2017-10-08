@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = UINavigationController(rootViewController: mainViewController)
         navigationController.navigationBar.isTranslucent = false
         navigationController.navigationBar.barTintColor = UIColor.init(red: 81/255.0, green: 153/255.0, blue: 206/255.0, alpha: 1.0)
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont(name: "HelveticaNeue-Light", size: 20)!]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont(name: "HelveticaNeue-Light", size: 20)!]
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         

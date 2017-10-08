@@ -9,41 +9,41 @@ import UIKit
 
 ///UIView that represents the tab EVPageViewTopTabBar
 open class EVPageViewTopTabBar: UIView  {
-    fileprivate var tabs: NumberOfTabs
-    fileprivate var indicatorXPosition = NSLayoutConstraint()
-    fileprivate var buttonFontColors: (selectedColor: UIColor, unselectedColor: UIColor)?
+    private var tabs: NumberOfTabs
+    private var indicatorXPosition = NSLayoutConstraint()
+    private var buttonFontColors: (selectedColor: UIColor, unselectedColor: UIColor)?
     ///Delegate for the tab bar
     open weak var delegate: EVTabBarDelegate?
     internal var currentState: Int
-    fileprivate var indicatorView: UIView? {
+    private var indicatorView: UIView? {
         didSet {
             indicatorView?.translatesAutoresizingMaskIntoConstraints = false
             indicatorView?.layer.cornerRadius = 4
             addSubview(indicatorView!)
         }
     }
-    fileprivate var rightButton: UIButton? {
+    private var rightButton: UIButton? {
         didSet {
             rightButton?.translatesAutoresizingMaskIntoConstraints = false
             rightButton?.addTarget(self, action: .buttonTapped, for: .touchUpInside)
             addSubview(rightButton!)
         }
     }
-    fileprivate var leftButton: UIButton? {
+    private var leftButton: UIButton? {
         didSet {
             leftButton?.translatesAutoresizingMaskIntoConstraints = false
             leftButton?.addTarget(self, action: .buttonTapped, for: .touchUpInside)
             addSubview(leftButton!)
         }
     }
-    fileprivate var middleButton: UIButton? {
+    private var middleButton: UIButton? {
         didSet {
             middleButton?.translatesAutoresizingMaskIntoConstraints = false
             middleButton?.addTarget(self, action: .buttonTapped, for: .touchUpInside)
             addSubview(middleButton!)
         }
     }
-    fileprivate var middleRightButton: UIButton? {
+    private var middleRightButton: UIButton? {
         didSet {
             middleRightButton?.translatesAutoresizingMaskIntoConstraints = false
             middleRightButton?.addTarget(self, action: .buttonTapped, for: .touchUpInside)
@@ -155,23 +155,23 @@ open class EVPageViewTopTabBar: UIView  {
         setConstraints()
     }
     
-    func buttonWasTouched(_ sender: UIButton!) {
+    @objc func buttonWasTouched(_ sender: UIButton!) {
         animate(to: sender.tag)
     }
 
-    func respondToRightSwipe(_ gesture: UIGestureRecognizer) {
+    @objc func respondToRightSwipe(_ gesture: UIGestureRecognizer) {
         if currentState.modTen < rightButton!.tag.modTen {
             animate(to: (currentState.modTen + 1).toTag)
         }
     }
     
-    func respondToLeftSwipe(_ gesture: UIGestureRecognizer) {
+    @objc func respondToLeftSwipe(_ gesture: UIGestureRecognizer) {
         if currentState.modTen > leftButton!.tag.modTen {
             animate(to: (currentState.modTen - 1).toTag)
         }
     }
     
-    fileprivate func setupGestureRecognizers() {
+    private func setupGestureRecognizers() {
         let rightSwipe = UISwipeGestureRecognizer(target: self, action: .respondToRightSwipe)
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: .respondToLeftSwipe)
         
@@ -183,7 +183,7 @@ open class EVPageViewTopTabBar: UIView  {
     }
     
     //MARK: - Constraints
-    fileprivate func setConstraints() {
+    private func setConstraints() {
         guard let leftButton = leftButton, let rightButton = rightButton, let indicatorView = indicatorView else {
             NSLog("Error: must set views in order to establish constraints")
             return
