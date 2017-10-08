@@ -10,12 +10,12 @@ import UIKit
 ///UIView that represents the tab EVPageViewTopTabBar
 open class EVPageViewTopTabBar: UIView  {
     private var tabs: NumberOfTabs
-    fileprivate var indicatorXPosition = NSLayoutConstraint()
-    fileprivate var buttonFontColors: (selectedColor: UIColor, unselectedColor: UIColor)?
+    private var indicatorXPosition = NSLayoutConstraint()
+    private var buttonFontColors: (selectedColor: UIColor, unselectedColor: UIColor)?
     ///Delegate for the tab bar
     open weak var delegate: EVTabBarDelegate?
     internal var currentState: Int
-    fileprivate var indicatorView: UIView? {
+    private var indicatorView: UIView? {
         didSet {
             indicatorView?.translatesAutoresizingMaskIntoConstraints = false
             indicatorView?.layer.cornerRadius = 4
