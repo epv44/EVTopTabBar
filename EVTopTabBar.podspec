@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "EVTopTabBar"
-  s.version          = "2.2.1"
+  s.version          = "3.0.0"
   s.homepage         = 'https://github.com/epv44/EVTopTabBar'
   s.author          = { 'Eric Vennaro' => 'epv9@case.edu' }
   s.summary          = "Custom UITabBarController with custom tabs that are at the top of the controller."
@@ -20,6 +20,7 @@ EVTopTabBar is a custom UIPageViewController for iOS where the page control is a
   s.source           = { :git => "https://github.com/epv44/EVTopTabBar.git", :tag => s.version.to_s }
   s.documentation_url = 'https://epv44.github.io/docs/EVTopTabBar/index.html'
   s.platform     = :ios, '9.3'
+  s.swift_version = '5.0'
   s.requires_arc = true
   s.source_files = 'Pod/Classes/**/*'
   s.frameworks = 'UIKit', 'Foundation'

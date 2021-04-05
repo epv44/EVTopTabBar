@@ -13,14 +13,14 @@ public protocol EVTabBar: class {
     ///Array containing UIViewControllers to be displayed
     var subviewControllers: [UIViewController] { get set }
     ///EVPageViewController itself
-    weak var topTabBar: EVPageViewTopTabBar? { get set }
+    var topTabBar: EVPageViewTopTabBar? { get set }
     ///UIPageViewController that serves as the base
     var pageController: UIPageViewController { get set }
 }
 
 public extension EVTabBar where Self: UIViewController {
     ///Sets up the UI of the page view and tab bar
-    public func setupPageView() {
+    func setupPageView() {
         topTabBar?.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(topTabBar!)
         pageController.view.translatesAutoresizingMaskIntoConstraints = false
@@ -28,13 +28,13 @@ public extension EVTabBar where Self: UIViewController {
         shadowView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(shadowView)
         pageController.setViewControllers([subviewControllers[0]], direction: .forward, animated: false, completion: nil)
-        addChildViewController(pageController)
+        addChild(pageController)
         view.addSubview(pageController.view)
-        pageController.didMove(toParentViewController: self)
+        pageController.didMove(toParent: self)
         pageController.view.addSubview(shadowView)
     }
     ///Sets constraints for the view
-    public func setupConstraints() {
+    func setupConstraints() {
         let views: [String:AnyObject] = ["menuBar" : topTabBar!, "pageView" : pageController.view, "shadow" : shadowView]
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|[menuBar]|", options: [], metrics: nil, views: views))
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[menuBar(==40)][pageView]|", options: [], metrics: nil, views: views))

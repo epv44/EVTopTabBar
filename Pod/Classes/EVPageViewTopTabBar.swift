@@ -7,10 +7,16 @@
 //
 import UIKit
 
+public enum IndicatorLayoutStyle {
+    case setWidth(CGFloat), textWidth, buttonWidth
+}
+
 ///UIView that represents the tab EVPageViewTopTabBar
 open class EVPageViewTopTabBar: UIView  {
     private var tabs: NumberOfTabs
+    private let indicatorStyle: IndicatorLayoutStyle
     fileprivate var indicatorXPosition = NSLayoutConstraint()
+    fileprivate var indicatorWidth = NSLayoutConstraint()
     fileprivate var buttonFontColors: (selectedColor: UIColor, unselectedColor: UIColor)?
     ///Delegate for the tab bar
     open weak var delegate: EVTabBarDelegate?
@@ -54,23 +60,23 @@ open class EVPageViewTopTabBar: UIView  {
     open var fontColors: (selectedColor: UIColor, unselectedColor: UIColor)? {
         didSet {
             buttonFontColors = fontColors
-            rightButton?.setTitleColor(fontColors!.unselectedColor, for: UIControlState())
-            middleButton?.setTitleColor(fontColors!.unselectedColor, for: UIControlState())
-            leftButton?.setTitleColor(fontColors!.selectedColor, for: UIControlState())
-            middleRightButton?.setTitleColor(fontColors!.unselectedColor, for: UIControlState())
+            rightButton?.setTitleColor(fontColors!.unselectedColor, for: UIControl.State())
+            middleButton?.setTitleColor(fontColors!.unselectedColor, for: UIControl.State())
+            leftButton?.setTitleColor(fontColors!.selectedColor, for: UIControl.State())
+            middleRightButton?.setTitleColor(fontColors!.unselectedColor, for: UIControl.State())
         }
     }
     ///Stored property sets the text for the right UIButton
     open var rightButtonText: String? {
         didSet {
-            rightButton?.setTitle(rightButtonText, for: UIControlState())
+            rightButton?.setTitle(rightButtonText, for: UIControl.State())
             setNeedsLayout()
         }
     }
     ///Stored property sets the text for the left UIButton
     open var leftButtonText: String? {
         didSet {
-            leftButton?.setTitle(leftButtonText, for: UIControlState())
+            leftButton?.setTitle(leftButtonText, for: UIControl.State())
             setNeedsLayout()
         }
     }
@@ -78,14 +84,14 @@ open class EVPageViewTopTabBar: UIView  {
     ///Stored property sets the text for the middle UIButton
     open var middleButtonText: String? {
         didSet {
-            middleButton?.setTitle(middleButtonText, for: UIControlState())
+            middleButton?.setTitle(middleButtonText, for: UIControl.State())
             setNeedsLayout()
         }
     }
     
     open var middleRightButtonText: String? {
         didSet {
-            middleRightButton?.setTitle(middleRightButtonText, for: UIControlState())
+            middleRightButton?.setTitle(middleRightButtonText, for: UIControl.State())
             setNeedsLayout()
         }
     }
@@ -110,8 +116,9 @@ open class EVPageViewTopTabBar: UIView  {
     
     //MARK: - Initialization
     ///init with frame
-    public init(for tabs: NumberOfTabs) {
+    public init(for tabs: NumberOfTabs, withIndicatorStyle indicatorStyle: IndicatorLayoutStyle) {
         self.tabs = tabs
+        self.indicatorStyle = indicatorStyle
         currentState = 111
         super.init(frame: CGRect.zero)
         setupUI()
@@ -119,6 +126,7 @@ open class EVPageViewTopTabBar: UIView  {
     ///init with coder
     required public init?(coder aDecoder: NSCoder) {
         tabs = .two
+        indicatorStyle = .textWidth
         currentState = 111
         super.init(coder: aDecoder)
         setupUI()
@@ -171,6 +179,44 @@ open class EVPageViewTopTabBar: UIView  {
         }
     }
     
+    public func getIndicatorViewConstraint(for button: UIButton) -> NSLayoutConstraint {
+        guard let indicatorView = indicatorView else {
+            fatalError("Must set indicator view");
+        }
+        switch indicatorStyle {
+        case .setWidth(let width):
+            return NSLayoutConstraint(
+                item: indicatorView,
+                attribute: .width,
+                relatedBy: .equal,
+                toItem: nil,
+                attribute: .notAnAttribute,
+                multiplier: 1,
+                constant: width
+            )
+        case .buttonWidth:
+            return NSLayoutConstraint(
+                item: indicatorView,
+                attribute: .width,
+                relatedBy: .equal,
+                toItem: button,
+                attribute: .width,
+                multiplier: 1,
+                constant: 0
+            )
+        case .textWidth:
+            return NSLayoutConstraint(
+                item: indicatorView,
+                attribute: .width,
+                relatedBy: .equal,
+                toItem: button.titleLabel,
+                attribute: .width,
+                multiplier: 1,
+                constant: 0
+            )
+        }
+    }
+    
     private func setupGestureRecognizers() {
         let rightSwipe = UISwipeGestureRecognizer(target: self, action: .respondToRightSwipe)
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: .respondToLeftSwipe)
@@ -184,7 +230,9 @@ open class EVPageViewTopTabBar: UIView  {
     
     //MARK: - Constraints
     private func setConstraints() {
-        guard let leftButton = leftButton, let rightButton = rightButton, let indicatorView = indicatorView else {
+        guard let leftButton = leftButton,
+              let rightButton = rightButton,
+              let indicatorView = indicatorView else {
             NSLog("Error: must set views in order to establish constraints")
             return
         }
@@ -192,51 +240,179 @@ open class EVPageViewTopTabBar: UIView  {
         
         switch tabs {
         case .two:
-            views = ["leftButton" : leftButton, "indicatorView" : indicatorView, "rightButton" : rightButton]
-            addConstraint(NSLayoutConstraint(item: leftButton, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: -70))
-            addConstraint(NSLayoutConstraint(item: rightButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: 100))
-            addConstraint(NSLayoutConstraint(item: rightButton, attribute: .leading, relatedBy: .equal, toItem: leftButton, attribute: .trailing, multiplier: 1, constant: 30))
-            addConstraint(NSLayoutConstraint(item: leftButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1, constant: 100))
+            views = [
+                "leftButton" : leftButton,
+                "indicatorView" : indicatorView,
+                "rightButton" : rightButton
+            ]
+            addConstraint(
+                NSLayoutConstraint(
+                    item: leftButton,
+                    attribute: .centerX,
+                    relatedBy: .equal,
+                    toItem: self,
+                    attribute: .centerX,
+                    multiplier: 1,
+                    constant: -70
+                )
+            )
+            addConstraint(
+                NSLayoutConstraint(
+                    item: rightButton,
+                    attribute: .width,
+                    relatedBy: .equal,
+                    toItem: nil,
+                    attribute: .width,
+                    multiplier: 1,
+                    constant: 100
+                )
+            )
+            addConstraint(
+                NSLayoutConstraint(
+                    item: rightButton,
+                    attribute: .leading,
+                    relatedBy: .equal,
+                    toItem: leftButton,
+                    attribute: .trailing,
+                    multiplier: 1,
+                    constant: 30
+                )
+            )
+            addConstraint(
+                NSLayoutConstraint(
+                    item: leftButton,
+                    attribute: .width,
+                    relatedBy: .equal,
+                    toItem: nil,
+                    attribute: .width,
+                    multiplier: 1,
+                    constant: 100
+                )
+            )
         case .three:
-            views = ["leftButton" : leftButton, "indicatorView" : indicatorView, "rightButton" : rightButton, "middleButton" : middleButton!]
-            addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|-40-[leftButton]-[middleButton(==leftButton)]-[rightButton(==leftButton)]-40-|", options: [], metrics: nil, views: views))
-            addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-9-[middleButton]-12-|", options: [], metrics: nil, views: views))
+            views = [
+                "leftButton" : leftButton,
+                "indicatorView" : indicatorView,
+                "rightButton" : rightButton,
+                "middleButton" : middleButton!
+            ]
+            addConstraints(
+                NSLayoutConstraint.constraints(
+                    withVisualFormat: "|-40-[leftButton]-[middleButton(==leftButton)]-[rightButton(==leftButton)]-40-|",
+                    options: [],
+                    metrics: nil,
+                    views: views
+                )
+            )
+            addConstraints(
+                NSLayoutConstraint.constraints(
+                    withVisualFormat: "V:|-9-[middleButton]-12-|",
+                    options: [],
+                    metrics: nil,
+                    views: views
+                )
+            )
         case .four:
-            views = ["leftButton" : leftButton, "indicatorView" : indicatorView, "rightButton" : rightButton, "middleButton" : middleButton!, "middleRightButton" : middleRightButton!]
-            addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|-[leftButton]-[middleButton(==leftButton)]-[middleRightButton(==leftButton)]-[rightButton(==leftButton)]-|", options: [], metrics: nil, views: views))
-            addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-9-[middleButton]-12-|", options: [], metrics: nil, views: views))
-            addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-9-[middleRightButton]-12-|", options: [], metrics: nil, views: views))
+            views = [
+                "leftButton" : leftButton,
+                "indicatorView" : indicatorView,
+                "rightButton" : rightButton,
+                "middleButton" : middleButton!,
+                "middleRightButton" : middleRightButton!
+            ]
+            addConstraints(
+                NSLayoutConstraint.constraints(
+                    withVisualFormat: "|-[leftButton]-[middleButton(==leftButton)]-[middleRightButton(==leftButton)]-[rightButton(==leftButton)]-|",
+                    options: [],
+                    metrics: nil,
+                    views: views
+                )
+            )
+            addConstraints(
+                NSLayoutConstraint.constraints(
+                    withVisualFormat: "V:|-9-[middleButton]-12-|",
+                    options: [],
+                    metrics: nil,
+                    views: views
+                )
+            )
+            addConstraints(
+                NSLayoutConstraint.constraints(
+                    withVisualFormat: "V:|-9-[middleRightButton]-12-|",
+                    options: [],
+                    metrics: nil,
+                    views: views
+                )
+            )
         }
 
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-9-[leftButton][indicatorView(==3)]-9-|", options: [], metrics: nil, views: views))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "[indicatorView(==20)]", options: [], metrics: nil, views: views))
-        indicatorXPosition = NSLayoutConstraint(item: indicatorView, attribute: .centerX, relatedBy: .equal, toItem: leftButton, attribute: .centerX, multiplier: 1, constant: 0)
+        addConstraints(
+            NSLayoutConstraint.constraints(
+                withVisualFormat: "V:|-9-[leftButton][indicatorView(==3)]-9-|",
+                options: [],
+                metrics: nil,
+                views: views
+            )
+        )
+        
+        indicatorXPosition = NSLayoutConstraint(
+            item: indicatorView,
+            attribute: .centerX,
+            relatedBy: .equal,
+            toItem: leftButton,
+            attribute: .centerX,
+            multiplier: 1,
+            constant: 0
+        )
         addConstraint(indicatorXPosition)
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-9-[rightButton]-12-|", options: [], metrics: nil, views: views))
+        indicatorWidth = getIndicatorViewConstraint(for: leftButton)
+        addConstraint(indicatorWidth)
+        addConstraints(
+            NSLayoutConstraint.constraints(
+                withVisualFormat: "V:|-9-[rightButton]-12-|",
+                options: [],
+                metrics: nil,
+                views: views
+            )
+        )
     }
 }
 
 extension EVPageViewTopTabBar: AnimateTransition {
     internal func animate(to newState: Int) {
-        let direction: UIPageViewControllerNavigationDirection = newState.modTen - currentState.modTen > 0 ? .forward : .reverse
+        let direction: UIPageViewController.NavigationDirection = newState.modTen - currentState.modTen > 0 ? .forward : .reverse
         
-        guard let fromButton = viewWithTag(currentState) as? UIButton, let toButton = viewWithTag(newState) as? UIButton else {
+        guard let fromButton = viewWithTag(currentState) as? UIButton,
+              let toButton = viewWithTag(newState) as? UIButton,
+              let indicatorView = indicatorView else {
             NSLog("Error, do not use tags 111, 222, 333, 444 these are used to identify buttons in EVTopTabBar")
             return
         }
         
-        let constraint = NSLayoutConstraint(item: indicatorView!, attribute: .centerX, relatedBy: .equal, toItem: toButton, attribute: .centerX, multiplier: 1, constant: 0)
-        
+        let constraint = NSLayoutConstraint(
+            item: indicatorView,
+            attribute: .centerX,
+            relatedBy: .equal,
+            toItem: toButton,
+            attribute: .centerX,
+            multiplier: 1,
+            constant: 0
+        )
+        let widthConstraint = getIndicatorViewConstraint(for: toButton)
         if let topBarDelegate = delegate {
             topBarDelegate.willSelectViewControllerAtIndex(newState.modTen - 1, direction: direction)
-            UIView.animate(withDuration: 0.5, delay: 0, options: UIViewAnimationOptions(), animations: {
+            UIView.animate(withDuration: 0.5, delay: 0, options: UIView.AnimationOptions(), animations: {
                 self.removeConstraint(self.indicatorXPosition)
+                self.removeConstraint(self.indicatorWidth)
                 self.indicatorXPosition = constraint
-                self.addConstraint(self.indicatorXPosition)
+                self.indicatorWidth = widthConstraint
+                self.addConstraints(
+                    [self.indicatorXPosition, self.indicatorWidth]
+                )
                 self.layoutIfNeeded()
                 }, completion: { finished in
-                    fromButton.setTitleColor(self.buttonFontColors?.unselectedColor, for: UIControlState())
-                    toButton.setTitleColor(self.buttonFontColors?.selectedColor, for: UIControlState())
+                    fromButton.setTitleColor(self.buttonFontColors?.unselectedColor, for: UIControl.State())
+                    toButton.setTitleColor(self.buttonFontColors?.selectedColor, for: UIControl.State())
                 }
             )
         }

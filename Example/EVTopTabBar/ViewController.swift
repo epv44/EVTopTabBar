@@ -29,7 +29,7 @@ class ViewController: UIViewController, EVTabBar {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        topTabBar = EVPageViewTopTabBar(for: .four)
+        topTabBar = EVPageViewTopTabBar(for: .four, withIndicatorStyle: .textWidth)
         let firstVC = FirstViewController(nibName:"FirstViewController", bundle: nil)
         let secondVC = SecondViewController(nibName:"SecondViewController", bundle: nil)
         let thirdVC = ThirdViewController(nibName: "ThirdViewController", bundle: nil)
@@ -47,7 +47,7 @@ class ViewController: UIViewController, EVTabBar {
 
 //MARK: EVTabBarDataSource
 extension ViewController: EVTabBarDelegate {
-    func willSelectViewControllerAtIndex(_ index: Int, direction: UIPageViewControllerNavigationDirection) {
+    func willSelectViewControllerAtIndex(_ index: Int, direction: UIPageViewController.NavigationDirection) {
         if index > subviewControllers.count {
             pageController.setViewControllers([subviewControllers[subviewControllers.count - 1]], direction: direction, animated: true, completion: nil)
         } else {

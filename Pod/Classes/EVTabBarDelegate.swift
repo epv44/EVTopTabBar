@@ -15,6 +15,6 @@ public protocol EVTabBarDelegate: class {
      - Parameter index: Int, array index determining which view controller is to be displayed
      - Parameter direction: UIPageViewControllerNavigationDirection
      */
-    func willSelectViewControllerAtIndex(_ index: Int, direction: UIPageViewControllerNavigationDirection)
+    func willSelectViewControllerAtIndex(_ index: Int, direction: UIPageViewController.NavigationDirection)
     
 }
